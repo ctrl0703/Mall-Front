@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/default">
+<th:block layout:fragment="css">
+<!--     <link rel="stylesheet" -->
+<!--           href="http://bootstrapk.com/dist/css/bootstrap.css" />   -->
+    <link rel="stylesheet"
+          href="/css/style2.css" />  
+       
+</th:block>
+<div layout:fragment="content" >
+<script type="text/javascript" th:inline="javascript">
+/* <![CDATA[ */
+	$(document).ready(function() {
+		findBySuperId2Depth('A');
+	});
+	function findBySuperId2Depth(superId){
+		var catTestList = /*[[ ${catTestList} ]]*/;
+		console.log(superId);
+		var upCat = '';
+		var leftCat = '';
+		var subName = '';
+		var subId = '';
+		var myName = '';
+		var myId = '';
+		for(key in catTestList) {
+			if(catTestList[key].superId == superId){
+				upCat = upCat + '<li><a onclick="javascript:findBySuperId3Depth(\'' + catTestList[key].id + '\')">' + catTestList[key].name + '</a></li>';
+				if(subName == ''){subName='<a>' + catTestList[key].name + '</a>';subId=catTestList[key].id;}
+			}
+			if(catTestList[key].id == superId){
+				myName = catTestList[key].name;
+				myId = catTestList[key].id;
+			}
+		}
+		if(upCat == '')upCat='<li>No Category</li>';
+		document.getElementById('findBySuperId2Depth').innerHTML = upCat;
+		document.getElementById('1Depthsub').innerHTML = myName;
+		if(subName == ''){
+			document.getElementById('findBySuperId2Depthsub').hidden=true;
+			document.getElementById('findBySuperId3Depthsub').hidden=true;
+			var catDepth1List = /*[[ ${catDepth1List} ]]*/;
+			for(key in catDepth1List) {
+				leftCat = leftCat + '<a onclick="javascript:findBySuperId2Depth(\'' + catDepth1List[key].id + '\')">' + catDepth1List[key].name + '</a>';
+			}
+			document.getElementById('leftCategory').innerHTML = leftCat;
+			getProductsByCat(myId);
+		} else {
+			document.getElementById('findBySuperId2Depthsub').hidden=false;
+			document.getElementById('findBySuperId3Depthsub').hidden=false;
+			document.getElementById('findBySuperId2Depthsub').innerHTML = subName;
+			findBySuperId3Depth(subId);
+		}
+	}
+	function findBySuperId3Depth(superId){
+		var catTestList = /*[[ ${catTestList} ]]*/;
+		console.log(superId);
+		var upCat = '';
+		var leftCat = '';
+		var subName = '';
+		var myName = '';
+		var myId = '';
+		var mysuperId = '';
+		for(key in catTestList) {
+			if(catTestList[key].superId == superId){
+				upCat = upCat + '<li><a onclick="javascript:findById3Depth(\'' + catTestList[key].id + '\')">' + catTestList[key].name + '</a></li>';
+				leftCat = leftCat + '<a onclick="javascript:findById3Depth(\'' + catTestList[key].id + '\')">' + catTestList[key].name + '</a>';
+				if(subName == ''){subName='<a>' + catTestList[key].name + '</a>';subId=catTestList[key].id;}
+			}
+			if(catTestList[key].id == superId){
+				myName = catTestList[key].name;
+				myId = catTestList[key].id;
+				mysuperId = catTestList[key].superId;
+			}
+		}
+		if(upCat == '')upCat='<li>No Category</li>';
+		document.getElementById('findBySuperId3Depth').innerHTML = upCat;
+		document.getElementById('findBySuperId2Depthsub').innerHTML = myName;
+		if(subName == ''){
+			document.getElementById('findBySuperId3Depthsub').hidden=true;
+			document.getElementById('findBySuperId3Depthsub').innerHTML = subName;
+// 			if(document.getElementById('leftCategory').innerHTML==''){
+				for(key in catTestList) {
+					if(catTestList[key].superId == mysuperId){
+						leftCat = leftCat + '<a onclick="javascript:findBySuperId3Depth(\'' + catTestList[key].id + '\')">' + catTestList[key].name + '</a>';
+					}
+				}
+				document.getElementById('leftCategory').innerHTML = leftCat;
+				getProductsByCat(myId);
+// 			}
+		} else {
+			document.getElementById('findBySuperId3Depthsub').hidden=false;
+			document.getElementById('findBySuperId3Depthsub').innerHTML = subName;
+			document.getElementById('leftCategory').innerHTML = leftCat;
+			getProductsByCat(subId);
+		}
+	}
+	function findById3Depth(id){
+		var catTestList = /*[[ ${catTestList} ]]*/;
+		var myName = '';
+		var myId = '';
+		for(key in catTestList) {
+			if(catTestList[key].id == id){
+				myName = catTestList[key].name;
+				myId = catTestList[key].id;
+			}
+		}
+		document.getElementById('findBySuperId3Depthsub').innerHTML = myName;
+		getProductsByCat(myId);
+	}
+	function getProductsByCat(id){
+		var pageStart = document.getElementById('pageStart').value;
+		var pageEnd = Number(document.getElementById('pageSize').value)+1;
+		$.get('/products/category/'+id+'/'+pageStart+'/'+pageEnd, function (data) {
+		}).done(function (data) {
+			$('#proudct_content').children().remove();
+            $('#proudct_content').html(data);
+            document.getElementById('pageId').value = id;
+		}).fail(function () {
+		}).always(function () {
+		});
+	}
+/* ]]> */	
+</script>   
+<input hidden="true" id="pageStart" value=1></input>
+<input hidden="true" id="pageSize" value=8></input>
+<input hidden="true" id="pageId" value></input>
+	<div class="row">
+		<div class="col-md-1 dropdown" th:if = "${catDepth1 != null}" >
+			<button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
+				data-toggle="dropdown" aria-expanded="true"  th:text="${catDepth1.name}" id="1Depthsub"></button>
+			<ul class="dropdown-menu" role="menu">
+				<li th:each="category: ${catDepth1List}">
+					<a th:text="${category.name}" th:onclick="javascript:findBySuperId2Depth([[${category.id}]])" >Action</a>
+				</li>
+              </ul>
+		</div>
+		<div class="col-md-1 dropdown">
+			<button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
+				data-toggle="dropdown" aria-expanded="true" id="findBySuperId2Depthsub"></button>
+			<ul class="dropdown-menu" role="menu" id="findBySuperId2Depth">
+            </ul>
+		</div>
+		<div class="col-md-1 dropdown">
+			<button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
+				data-toggle="dropdown" aria-expanded="true" id="findBySuperId3Depthsub"></button>
+			<ul class="dropdown-menu" role="menu" id="findBySuperId3Depth">
+            </ul>
+		</div>
+	</div>
+	<div class="row">
+	<div class="col-md-2">
+    	<ul class="nav">
+          <li class=""  id="leftCategory">
+          </li>
+        </ul>
+    </div>
+	<div class="col-md-9 ml-sm-auto col-lg-10 px-4">
+		<div layout:fragment="proudct_content"></div>
+	</div>
+
+	</div><!-- 	end class row -->
+</div>
+</html>

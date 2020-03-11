@@ -1,4 +1,4 @@
-package com.frontend;
+package com.frontend.controller;
 
 import java.util.List;
 
@@ -8,10 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.domain.Category;
-//import com.domain.Hash;
-import com.domain.Product;
 import com.frontend.client.ProductClient;
+import com.frontend.domain.Category;
+import com.frontend.domain.Product;
 
 @Controller
 public class ProductFrontController {

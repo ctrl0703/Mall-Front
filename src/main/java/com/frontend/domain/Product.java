@@ -1,4 +1,4 @@
-package com.domain;
+package com.frontend.domain;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -6,10 +6,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.domain.Category;
-import com.domain.Product;
+import com.frontend.domain.Category;
+import com.frontend.domain.Product;
 
-@FeignClient(name="product-service", url="localhost:8083")
+@FeignClient(name="product-service", url="${feign.client.url.ProductServiceUrl}")
 public interface ProductClient {
 	@GetMapping("/category/{categoryId}/product")
 	List<Product> getCategoryProducts(@PathVariable String categoryId);

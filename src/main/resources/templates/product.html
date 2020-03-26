@@ -126,10 +126,10 @@
 							<!-- Recently Viewed Item -->
 							<div class="owl-item" th:each="sameLineProduct : ${sameLineProducts}">
 								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img th:src="${sameLineProduct.imageUrl}" alt=""></div>
+									<div class="viewed_image"><a th:href="@{/product/{productId}(productId=${sameLineProduct.id})}"><img th:src="${sameLineProduct.imageUrl}" alt=""></a></div>
 									<div class="viewed_content text-center">
 										<div class="viewed_price" th:text="${sameLineProduct.price} + '원'"><span></span></div>
-										<div class="viewed_name"><a href="#" th:text="${sameLineProduct.name}"></a></div>
+										<div class="viewed_name"><a th:href="@{/product/{productId}(productId=${sameLineProduct.id})}" th:text="${sameLineProduct.name}"></a></div>
 									</div>
 									<ul class="item_marks">
 										<li class="item_mark item_discount">-25%</li>

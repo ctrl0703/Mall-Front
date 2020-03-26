@@ -1,0 +1,885 @@
+<!-- content S -->
+<div class="prdDetailConWrap">
+	<style type="text/css">
+		.pcVer{}
+		.moVer{display:none !important;}
+		
+		.noticeType .descWrap{padding:35px 14% 40px;background-color:#ffeeee;text-align:center;}
+		.noticeType .descWrap .tit{display:inline-block;padding:5px;font-size:32px;background-color:#fff;}
+		.noticeType .descWrap p{margin-top:30px;font-size:20px;line-height:1.6;color:#333;text-align:left;}
+		.noticeType .descWrap p em{font-family:'ngB';}
+
+		.prdType01 .imgWrap p{margin:7px 0 41px;font-family:'ng';font-size:13px;color:#222;}
+		.prdType01 .imgWrap p span{font-family:'ngB';}
+		
+		.userType11 .subTit{padding-top:36px;font-size:50px;color:#26cad3;background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img15_top.jpg') no-repeat center center;}
+		.userType11 .imgWrap ul{margin-top:130px;overflow:hidden;}
+		.userType11 .imgWrap .box{float:left;width:25%;}
+		.userType11 .imgWrap .box05{float:right;width:100%;padding-top:10px;clear:both;font-size:14px;}
+		.userType11 .descWrap{margin-top:80px;padding:60px;background-color:#f7f7f7;}
+		.userType11 .descWrap p{margin-top:20px;padding:50px 36px 25px;font-size:18px;color:#333;line-height:1.8em;letter-spacing:-0.5px;text-align:center;background:#fff url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img15_bg.jpg') no-repeat center top;border:1px solid #eaeaea;}
+		.userType11 .descWrap p em{font-family:'ngB';}
+		.userType11 .descWrap p span{display:block;margin-top:20px;font-size:16px;color:#888;text-align:right;}
+		
+		.userType01 .conBottom{position:relative;padding:87px 0;margin-top:20px;}
+		.userType01 .conBottom .imgWrap{position:absolute;right:0;top:0;}
+
+		.userType02 .conBottom{margin-top:120px;overflow:hidden;}
+		.userType02 .conBottom .imgWrap{float:left;width:59.86%;}
+		.userType02 .conBottom .descWrap{float:right;width:35.06%;}
+		.userType02 .conBottom .descWrap .tit span{display:block;margin-bottom:10px;color:#fa8984;}
+
+		.userType03 .imgWrap{margin-left:60%;}
+		.userType03 .descWrap{left:0;padding-right:45%;}
+		.userType03 .descWrap dl{margin-top:35px;}
+		.userType03 .descWrap dl dt{font-family:'ngB';color:#222;line-height:1;font-size:24px;padding-left:36px;background:url('images/img03_icon.jpg') no-repeat 6px center;}
+		.userType03 .descWrap dl dd{margin-top:15px;}
+		.userType03 .descWrap .info{font-size:14px;line-height:1;color:#666;}
+		.userType03 .descWrap .tit span{color:#fa8984;}
+		.userType03 .txt{margin-top:15;font-size:14px;color:#888;}
+		.userType03 .txt .slash{display:none;}
+		.userType03 .descWrap .pcVer .tit {margin-top:55px;}
+		
+		.prdType69 .descWrap{width:46%;text-align:left;}
+		.prdType69 .descWrap .tit{display:inline-block;color:#fff;background-color:#fa8984;padding:0 7px;}
+		.prdType69 .descWrap li h5{margin-top:30px;font-size:18px;font-family:'ngB';color:#222;}
+		.prdType69 .descWrap li p{margin-top:5px;}
+
+		.userType04 > .imgWrap{margin-top:15px;overflow:hidden;}
+		.userType04 > .imgWrap div{float:left;width:49%;margin-left:2%;}
+		.userType04 > .imgWrap div:first-child{margin:0;}
+		.userType04 .conBottom{position:relative;margin-top:25px;}
+		.userType04 .conBottom .imgWrap{margin-right:526px;height:328px;}
+		.userType04 .conBottom .imgWrap img{margin-left:-325px;}
+		.userType04 .conBottom .descWrap{right:0;width:475px;}
+		.userType04 .conBottom .descWrap li{margin-top:24px;font-size:14px;line-height:24px;}
+		.userType04 .conBottom .descWrap li:first-child{margin:0;}
+
+		.userType05 ul{overflow:hidden;}
+		.userType05 li{float:left;width:32%;margin-left:2%;}
+		.userType05 li:first-child{margin:0;}
+
+		.userType06 .movie{margin-left:45.6%;}
+		.userType06 .descWrap{position:absolute;left:0;top:0;width:42%;height:100%;}
+		.userType06 .descWrap:before{content:'';position:absolute;left:0;top:0;width:100%;height:1px;background:#ddd;}
+		.userType06 .descWrap:after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:#ddd;}
+		.userType06 .descWrap .vCenter{left:0;width:100;}
+		.userType06 .descWrap ol{margin-top:20px;}
+		.userType06 .descWrap li{overflow:hidden;font-size:14px;line-height:24px;}
+		.userType06 .descWrap li span{float:left;}
+		.userType06 .descWrap li em{display:block;margin-left:18px;}
+
+		.mssPopup{margin-top:120px;}
+		.mssPopup a{display:block;border:1px solid #cdd1d0;background:#f5f5f5;width:604px;line-height:98px;margin:0 auto;font-size:24px;color:#222;text-decoration:none;font-family:'ngB';text-align:center;}
+
+		.mssPopup2 a{border:1px solid #efdcd5;background:#fdebe4;}
+
+		.userEtc{max-width:606px;margin:30px auto 0 auto;position:relative;}
+		.userEtc .imgWrap{width:110px;margin-left:25px;}
+		.userEtc .descWrap{left:140px;padding-left:15px;font-size:14px;line-height:24px;color:#666;}
+		.userEtc .descWrap:before{content:'*';position:absolute;left:0;top:0;}
+
+		.userType07 ul{overflow:hidden;}
+		.userType07 li:nth-child(1){float:left;margin-left:6%;}
+		.userType07 li:nth-child(2){float:right;}
+		.userType07 li:nth-child(2) img{margin: 0;}
+		.userType07 p.tit{font-size:24px;line-height: 1;font-family: 'ngB';color: #222222;margin-top: 15px;line-height: 34px;}
+		.userType07 p{font-size: 14px;line-height: 24px;}
+
+		.userType08{border-bottom:1px solid #ddd;;}
+		.userType08 .imgCrop{height:571px;margin-right:552px;}
+		.userType08 .imgCrop img{margin-left:-312px;}
+		.userType08 .descWrap{width:560px;right:50px;}
+		.userType08 .descWrap .tit2{font-size:32px;font-family:'ngB';line-height:42px;color:#222;}
+		.userType08 .descWrap ul{margin-top:40px;}
+		.userType08 .descWrap li{height:68px;margin-top:20px;padding-left:85px;}
+		.userType08 .descWrap li:first-child{margin:0;}
+		.userType08 .descWrap .list1{background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img10_1.jpg') no-repeat left top;}
+		.userType08 .descWrap .list2{background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img10_2.jpg') no-repeat left top;}
+		.userType08 .descWrap .list3{background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img10_3.jpg') no-repeat left top;}
+		.userType08 .descWrap .tit{padding-top:15px;}
+		.userType08 .descWrap p{margin-top:0;}
+
+		.userType09 .tit span{color:#fa8984;}
+
+		.userType09 .txt{margin-top:15;font-size:14px;color:#888;}
+		.userType09 .txt .slash{display:none;}
+
+		.userType09 .conT{position:relative;}
+		.userType09 .conB{position:relative;margin-top:60px;}
+		.userType09 .imgWrap{height:328px;}
+		.userType09 .imgWrap img{margin-left:-325px;}
+		.userType09 .conT .imgWrap{margin-right:526px;}
+		.userType09 .conT .descWrap{right:0;width:465px;}
+		.userType09 .conB .imgWrap{margin-left:526px;}
+		.userType09 .conB .descWrap{left:0;}
+
+		.userType10 .title{text-align:center;}
+		.userType10 .title span{display:inline-block;*zoom:1;font-size:30px;font-family:'ngB';line-height:1;color:#222;padding-bottom:10px;border-bottom:2px solid #222;}
+		.userType10 .imgWrap{margin-top:60px;}
+
+		.prdTableType table thead th{font-size:24px;font-family:'notoR';color:#222;line-height:70px;background:#ffcfca;}
+		.prdTableType table thead th strong {font-family:'notoM';}
+		.prdTableType table tbody th{border-right:1px solid #dcdcdc;font-size:18px;font-family:'notoR';color:#222;background:#f5f5f5;}
+		.prdTableType table tbody tr{border-bottom:1px solid #dcdcdc;}
+		.prdTableType table tbody td{padding:19px 0;border-right:1px solid #dcdcdc;text-align:center;font-size:14px;color:#666;line-height:20px;}
+		.prdTableType table tbody .gf td{color:#888;}
+
+		@media screen and (max-device-width: 740px){
+			.pcVer{display:none !important;}
+			.moVer{display:block !important;}
+			.prdType .descWrap{text-align:center;}
+			
+			.noticeType .descWrap{padding:30px 10px;}
+			.noticeType .descWrap .tit{padding:0 3px;font-size:17px;}
+			.noticeType .descWrap p{margin-top:15px;font-size:10px;line-height:1.6;text-align:center;}
+
+			.prdType01 .imgWrap p{padding:0 15px;margin:9px 0 0;font-size:9px;line-height:13px;}
+			
+			.userType11 .subTit{padding-top:20px;font-size:25px;background-size:auto 100%;}
+			.userType11 .imgWrap ul{margin-top:36px;}
+			.userType11 .imgWrap .box{width:33.3%;margin-top:33px;}
+			.userType11 .imgWrap .box01{display:none;}
+			.userType11 .imgWrap .box05{float:none;width:auto;font-size:10px;}
+			.userType11 .descWrap{margin-top:35px;padding:20px 15px 30px;}
+			.userType11 .descWrap p{margin-top:10px;padding:25px 15px 15px;font-size:11px;line-height:1.7em;background:#fff url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img15_bg_m.jpg') no-repeat center top / 288PX auto;}
+			.userType11 .descWrap p span{margin-top:5px;font-size:10px;text-align:center;}
+			
+			.userType01 .conBottom{position:relative;padding:0;margin-top:11px;}
+			.userType01 .conBottom .imgWrap{position:static;margin:0 7px;}
+
+			.userType02 .conBottom{margin-top:30px;}
+			.userType02 .conBottom{margin-top:60px;overflow:hidden;}
+			.userType02 .conBottom .imgWrap{float:none;width:auto;margin:0 7px;}
+			.userType02 .conBottom .descWrap{float:none;width:auto;margin:0 15px 40px 15px;padding:0;}
+			.userType02 .conBottom .descWrap .tit span{margin-bottom:7px;}
+			
+			.userType03 .txt{margin-top:7px;font-size:10px;color:#888;text-align:center;line-height: 16px;}
+			.userType03 .txt .slash{display:inline-block;}
+
+			.userType03 .imgWrap{width:195px;margin:30px auto 0 auto;}
+			.userType03 .descWrap{padding:static;left:0;margin-right:0;padding-right:15px;}
+			.userType03 .descWrap dl{margin-top:18px;}
+			.userType03 .descWrap dl dt{font-size:12px;padding-left:18px;background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img03_icon.jpg') no-repeat 3px center / auto 11px;}
+			.userType03 .descWrap dl dd{margin-top:5px;}
+			.userType03 .descWrap .info{font-size:10px;line-height:12px;margin-top:5px;}
+			
+			.prdType71 .userType03 {margin:-30px 0 30px;}
+
+			.prdType69 .descWrap{width:auto;}
+			.prdType69 .descWrap .tit{padding:0 5px;font-size:16px;}
+			.prdType69 .descWrap li h5{margin-top:18px;font-size:16px;}
+			.prdType69 .descWrap li p{margin-top:3px;}
+
+			.userType04 > .imgWrap{margin-top:27px;}
+			.userType04 > .imgWrap div{float:none;width:100%;margin:3px 0 0 0;text-align:center;}
+			.userType04 .conBottom{margin-top:20px;}
+			.userType04 .conBottom .imgWrap{margin-right:0;height:auto;}
+			.userType04 .conBottom .imgWrap img{margin-left:0;}
+			.userType04 .conBottom .descWrap{width:auto;}
+			.userType04 .conBottom .descWrap ol{margin-top:25px;}
+			.userType04 .conBottom .descWrap li{margin-top:22px;font-size:15px;line-height:22px;}
+			.userType04 .conBottom .descWrap li:first-child{margin:0;}
+
+			.userType05 li{float:left;width:100%;margin:10px 0 0 0;}
+
+			.userType06 .movie{max-width:500px;margin:0 auto;}
+			.userType06 .descWrap{position:static;width:auto;height:auto;margin:25px 0 0 0;}
+			.userType06 .descWrap:before, .userType06 .descWrap:after{display:none;}
+			.userType06 .descWrap .vCenter{border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding-bottom:25px;}
+			.userType06 .descWrap ol{margin-top:10px;text-align:left;}
+			.userType06 .descWrap li{font-size:15px;line-height:22px;}
+
+			.mssPopup{margin-top:30px;}
+			.mssPopup a{width:302px;line-height:48px;font-size:14px;}
+
+			.mssPopup2{margin-top:60px;}
+
+			.userEtc{margin:30px 15px 0 15px;}
+			.userEtc .imgWrap{width:80px;margin-left:0;}
+			.userEtc .imgWrap img{width:100%;}
+			.userEtc .descWrap{left:90px;padding-left:10px;font-size:11px;line-height:16px;}
+
+			.userType07 li:nth-child(1){float:none;margin-left:0;}
+			.userType07 li:nth-child(1) img{width:50%;}
+			.userType07 li:nth-child(2){float:none;margin-top:30px;}
+			.userType07 li:nth-child(2) img{margin: 0 auto;}
+			.userType07 p.tit{font-size:18px;margin-top: 10px;line-height: 25px;}
+			.userType07 p{font-size: 15px;line-height: 22px;}
+
+			.userType08{margin:35px 15px 0 15px;}
+			.userType08 .imgCrop{height:auto;margin-right:0;}
+			.userType08 .imgCrop img{margin-left:0;}
+			.userType08 .descWrap{width:auto;padding:0 0 60px 0;}
+			.userType08 .descWrap .tit2{font-size:18px;line-height:25px;}
+			.userType08 .descWrap ul{margin-top:15px;text-align:left;}
+			.userType08 .descWrap li{height:42px;margin-top:10px;padding-left:50px;}
+			.userType08 .descWrap li:first-child{margin:0;}
+			.userType08 .descWrap li:nth-child(2){height:60px;}
+			.userType08 .descWrap .list1{background-size:auto 42px;}
+			.userType08 .descWrap .list2{background-size:auto 42px;}
+			.userType08 .descWrap .list3{background-size:auto 42px;}
+			.userType08 .descWrap .tit{padding-top:7px;margin:0;font-size:15px;}
+			.userType08 .descWrap p{margin-top:0;font-size:10px;line-height:15px;}
+
+			.userType09 .tit span{margin-bottom:7px;}
+			.userType09 .conB{margin-top:30px;}
+			.userType09 .imgWrap{height:auto;}
+			.userType09 .imgWrap img{margin-left:0;}
+			.userType09 .conT .imgWrap{margin-right:0;}
+			.userType09 .conT .descWrap{width:auto;}
+			.userType09 .conB .imgWrap{margin-left:0;}
+			.userType09 .conB .descWrap{width:auto;}
+
+			.userType09 .txt{margin-top:7px;font-size:10px;color:#888;text-align:center;line-height: 16px;}
+			.userType09 .txt .slash{display:inline-block;}
+
+			.userType10 .title{text-align:center;}
+			.userType10 .title span{font-size:24px;line-height:31px;padding-bottom:5px;border-bottom:1px solid #222;}
+			.userType10 .imgWrap{margin-top:20px;}
+
+			.prdTableType{padding:0 15px;text-align:center;}
+			.prdTableType table thead th{font-size:18px;line-height:44px;}
+			.prdTableType table tbody td{padding:11px 0;font-size:15px;border-right:0 none;}
+			.prdTableType table tbody .pd2 td{padding:21px 0}
+			
+			.pdtSlide .swiper-wrapper .swiper-slide{margin-bottom:15px;}
+			.pdtSlide .swiper-pagination{display:inline-block;vertical-align:middle;line-height:0;}
+			.pdtSlide .swiper-pagination .swiper-pagination-bullet{display:inline-block;width:11px;height:11px;margin:0 4px;vertical-align:middle;background:#dbdbdb;
+			-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;}
+			.pdtSlide .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{background:#565656;}
+			.pdtSlide .swiper-btn{display:inline-block;position:relative;vertical-align:middle;line-height:0;width:11px;height:11px;font-size:0;color:transparent;text-indent:-99999em;}
+			.pdtSlide .swiper-btn::before, .pdtSlide .swiper-btn::after{position:absolute;top:0;bottom:0;border:0 solid transparent;border-right:0;border-left:4px solid #565656;content:'';}
+			.pdtSlide .swiper-btn::before{right:0;}
+			.pdtSlide .swiper-btn::after{left:0;}
+			.pdtSlide .swiper-btn.stop::before{border:0;}
+			.pdtSlide .swiper-btn.stop::after{border-width:5px;border-left:10px solid #565656;}
+
+		}
+	</style>
+
+	<h3 class="subTit mgt0"><span class="ng">깐깐한 무기자차로 자외선부터<br class="mBr" /> 블루라이트까지 차단!</span><em>트루케어 논나노 논코메도<br class="mBr" /> 무기자차 선크림 SPF48 PA+++</em></h3>
+
+	<div class="prdType prdType01">
+		<div class="imgWrap">
+			<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_25/img09.jpg" alt="" />
+			<p>
+				<span>수상내역 : </span>
+				2019 셀프뷰티 랩 3월 위너, 2019 파우더룸 퀸즈맨 뷰티, <br class="mBr" />2019 파우더룸 상반기 뷰티 어워드 선크림 부문 1위 
+			</p>
+		</div>
+		<div class="descWrap">
+			<h4 class="tit">매일 발라야 하는 선크림,<br class="mBr" /> 이제 트루 선크림에 정착하세요.</h4>
+			<p>햇빛을 물리적으로 반사하는 무기 자외선 차단 성분을 함유하고 연약한 피부에도<br class="pcBr" /> 마일드하게 발리면서 가볍게 마무리 되는 수분 자외선 차단제</p>
+		</div>
+	</div>
+	
+	
+	<div class="prdType userType11">
+		<h3 class="subTit">화해 화장품 설문회</h3>
+		
+		<div class="imgWrap">
+			<ul>
+				<li class="box box01"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_25/img15_1.jpg" alt="" /></li>
+				<li class="box box02"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img15_2.jpg" alt="" /></li>
+				<li class="box box03"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img15_3.jpg" alt="" /></li>
+				<li class="box box04"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img15_4.jpg" alt="" /></li>
+				<li class="box box05">
+					<p>*2주간 화해 화장품 설문단 413명의 <br class="mBr" /> 트루케어 논나노 논코메도 무기자차 제품 설문 결과</p>
+				</li>
+			</ul>
+		</div>
+		<div class="descWrap">
+			<p>선크림 제품이 바르고 나면 끈적 거림으로 인해<br class="mBr" /> 한번 두번 바르거나 야외활동(운동)시에만 발랐는데<br /> 이 제품은 <em>끈적함이 없어 매일 바르게 됐습니다.</em><br class="mBr" /> 소량으로 발라도 톤업도 되고 <em>진짜 재구매율 100%입니다.</em>
+			<span>28살, 복합성 피부</span></p>
+			<p><em>수분감과 톤업과 산뜻함을 고루 갖춘 선크림이어서<br class="mBr" /> 매일 발라도 무리가 없었어요.</em><br class="pcBr" /> 가벼운 로션타입<br class="mBr" /> 제형이라 얼굴 전체로 발림성도 좋았구요. 인위적인<br class="mBr" /> 향이 안 나는 것도 큰 장점이었습니다.<br class="pcBr" /> 톤업효과가<br class="mBr" /> 있어 평일 화장 전에 반드시 찾아 썼고 주말에는<br class="mBr" /> 비비크림 없이 이 선크림 하나로 커버 가능했습니다.<br /> 이거 하나로도 얼굴이 화사해지더라구요.
+			<span>35살, 중성 피부</span></p>
+			<p>백탁 현상이 있어서 처음에는 뭐지? 했는데<br class="mBr" /> 나중에는 자연스러워 지더라구요.<br /> <em>선크림 유목민이라 이것저것 많이 써봤는데 이건 또<br class="mBr" /> 사용하고 싶은 제품이에요^^<br class="pcBr" /> 화해 이벤트 덕분에<br class="mBr" /> 좋은 선크림 하나 알게 되었네요^^</em>
+			<span>34살, 건성 피부</span></p>
+			<p>기존의 무기자차를 생각 했을 때보다,<br class="mBr" /> <em>발림성이 촉촉한 편이고 흡수력까지 만족한 제품!!</em><br /> 선크림사용 시 톤업 효과도 있고, 특히 안 밀려서 만족했어요.<br class="mBr" /> <em>성분도 좋은 거 같아요.</em>
+			<span>31살, 복합성 피부</span></p>
+			<p>저는 민감성에 악건성까지 있어 그동안 맞는 선크림<br class="mBr" /> 찾기가 너무 힘들었습니다.<br class="pcBr" /> 하지만 화해 이벤트에<br class="mBr" /> 당첨된 후 속는셈 치고 써봤는데 정말 깜짝 놀랐습니다.<br /> 첫 인상은 "이게 무기자차라고?" 였어요.<br class="mBr" /> <em>발림성이 너무 좋아서 무기자차의 상징인 뻑뻑함을<br /> 찾아볼수가 없었거든요. 그리고 가장 중요한 건 제 피부에<br class="mBr" /> 정말 잘 맞았다는 것입니다.</em><br class="pcBr" /> 진짜 감격했어요.<br class="mBr" /> 다 필요 없고 전 이제 선크림 이걸로 정착 할거에요.
+			<span>22살, 건성 피부</span></p>
+		</div>
+	</div>
+
+	<div class="prdType userType08 mgt0">
+		<div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_25/img10.jpg" alt="" /></div>
+		<div class="descWrap vCenter">
+			<div class="tit2">선크림을 고르는 기준!<br /> 앞으로 3가지를 기억하세요.</div>
+			<ul>
+				<li class="list1">
+					<h4 class="tit">논나노 선크림</h4>
+				</li>
+				<li class="list2">
+					<h4 class="tit">논코메도제닉 테스트 완료 선크림</h4>
+					<p>*논코메도제닉테스트란? 여드름성 피부에<br class="mBr" /> 사용 가능하다는 인체적용시험입니다.</p>
+				</li>
+				<li class="list3">
+					<h4 class="tit">무기자차 선크림</h4>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<h3 class="subTit"><em>트루케어 논나노 논코메도<br class="mBr" /> 무기자차 선크림 본격탐구</em></h3>
+
+	<div class="prdType userType02">
+		<!-- <div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img02_1.jpg" alt="" /></div> -->
+		<div class="conBottom">
+			<div class="descWrap">
+				<h4 class="tit"><span>#탐구01</span>피부에 잘 흡수되지 않는<br /> 논나노(NON-NANO) 선크림 </h4>
+				<p>트루케어 선크림은 논-나노 사이즈 성분을 사용하여<br class="pcBr" /> 피부에 더욱 순하고 편안하게 작용합니다.</p>
+			</div>
+			<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img02_2.jpg" alt="" /></div>
+		</div>
+	</div>
+
+	<div class="prdType userType03">
+		<div class="descWrap vCenter">
+			<h4 class="tit"><span>#탐구02</span><br /> 자연유래 성분이 들어간 포뮬라로<br class="mBr" /> 여드름성 피부에<br class="pcBr" /> 사용 가능한<br class="mBr" /> 논코메도 (NON-COMEDO) 선크림</h4>
+			<p>5가지 자연유래 성분이 피부를 진정과 보습에 도움을 주고 여드름성 피부에 사용 가능하다는<br class="pcBr" /> 인체적용시험인 논코메도제닉 테스트를 완료해 선크림 사용 시 발생하는 피부 고민을 줄여<br class="pcBr" /> 자외선으로부터 피부를 건강하게 지켜줍니다.</p>
+			<p class="txt top">시험기관: ㈜코어덤 피부과학연구소 <br class="pcBr"><span class="slash">/</span> 시험기간: 2017.01.23 ~ 2017.02.21<br />시험 인원: 22명</p>
+			<div class="pcVer">
+				<h4 class="tit"><span>#탐구03</span><br /> 블루라이트 차단 확인 테스트 완료</h4>
+				<p>피부에 자극을 주는 자외선과 블루라이트 2중 차단 가능한<br class="pcBr" /> 깐깐한 무기자차 선크림</p>
+				<p class="txt top">시험기관: 대한피부과학연구소 <br class="pcBr"><span class="slash">/</span> 시험기간: 2019.10.21 ~ 2019.12.27 <br />
+				시험 인원: 10명</p>
+			</div>
+			<!-- <dl>
+				<dt>끈적임 없이 산뜻하게 발린다.</dt>
+				<dd><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img03_2.jpg" alt="95%" /></dd>
+			</dl>
+			<dl>
+				<dt>자극 없이 편안하게 작용하는 것c 같다.</dt>
+				<dd><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img03_3.jpg" alt="90%" /></dd>
+			</dl>
+			<p class="info">* ㈜코어덤 피부과학연구소 / 2017. 1. 23 ~ 2. 21 / 19세~40세 여성 23명</p> -->
+		</div>
+		<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img03_1_AD.jpg" alt="" /></div>
+	</div>
+
+	<div class="prdType prdType71">
+		<div class="imgWrap pcVer"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img11.jpg" alt=""></div>
+		<div class="imgWrap moVer">
+			<div class="userType03">
+				<div class="descWrap">
+					<h4 class="tit"><span>#탐구03</span><br> 블루라이트 차단 확인 테스트 완료</h4>
+					<p>피부에 자극을 주는 자외선과<br class="mBr"> 블루라이트 2중 차단 가능한<br> 깐깐한 무기자차 선크림</p>
+					<p class="txt top">시험기관: 대한피부과학연구소 <br class="pcBr"><span class="slash">/</span> 시험기간: 2019.10.21 ~ 2019.12.27 <br>
+					시험 인원: 10명</p>
+				</div>
+			</div>
+			<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img11_m.jpg" alt="" width="320">
+		</div>
+	</div>
+
+	<div class="prdType userType09">
+		<!-- <div class="conT">
+			<div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_25/img12_1.jpg" alt="" /></div>
+			<div class="descWrap vCenter">
+				<h4 class="tit"><span>#탐구03</span><br /> 블루라이트 차단 확인 테스트 완료</h4>
+				<p>피부에 자극을 주는 자외선과 블루라이트 2중 차단 가능한<br class="pcBr" /> 깐깐한 무기자차 선크림</p>
+				<p class="txt top">시험기관: 대한피부과학연구소 <br class="pcBr"><span class="slash">/</span> 시험기간: 2019.10.21 ~ 2019.12.27 <br />
+				시험 인원: 10명</p>
+			</div>
+		</div> -->
+		<div class="conB">
+			<div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img12_2.jpg" alt="" /></div>
+			<div class="descWrap vCenter">
+				<h4 class="tit">무기자외선차단체 특유의<br class="mBr" /> 뻑뻑함을 개선한<br class="pcBr" /> 물 터지듯<br class="mBr" /> 가볍게 밀착되는 소프트 스킨 핏<br /> 고수분(water-base) 선크림</h4>
+				<p>
+					무기자차의 특유의 뻑뻑한 사용감을 개선하기 위해 수분 에센스 성분을<br class="pcBr" /> 10% 이상 함유하여 스킨케어처럼 부드럽고 촉촉하게 발려 연약한 피부에도<br class="pcBr" /> 사계절 사용 가능한 선크림 입니다.<br /><br />
+					수분감이 풍부하고 가볍게 마무리되어 메이크업이 밀리지 않고 자연스러운<br class="pcBr" /> 톤업 효과까지 연출해주는 데일리 선크림 입니다.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="prdType userType07">
+		<ul>
+			<li>
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img06_1.jpg" alt=""></div>
+				<div class="descWrap">
+					<p class="tit">트루케어 논나노 논코메도<br /> 무기자차 선크림 SPF48 50ml<br /> 15,000원</p>
+					<p>이니스프리 공식 홈페이지 4883개 리뷰를 분석해<br class="pcBr" /> 많이 언급된 키워드를 정리했습니다. (2019.01.02 기준)</p>
+				</div>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img06_2.jpg" alt=""></div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="prdType prdType09">
+		<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img04.jpg" alt="" /></div>
+		<div class="descWrap vCenter">
+			<h4 class="tit">물 터지듯 가볍게<br /> 고수분(water-base) 선크림</h4>
+			<p>
+				트루케어는 무기자차의 단점인 뻑뻑한 사용감을<br class="pcBr" />
+				개선하기 위해 수분 에센스 성분을 10%<br class="pcBr" />
+				이상 함유하여 획기적인 텍스쳐를 탄생시켰습니다.<br class="pcBr" />
+				부드러운 크림 텍스쳐가 피부에 도포되면서<br class="pcBr" />
+				에센스 제형으로 바뀌어 물이 터지듯 발리면서<br class="pcBr" />
+				가볍게 밀착되며 피부 보호막을 형성해줍니다.<br /><br />
+
+				수분감이 풍부하고 가볍게 마무리되어 메이크업에<br class="pcBr" />
+				밀리지 않고 자연스러운 톤업 효과까지 연출해주는<br class="pcBr" />
+				사계절 데일리 선크림 입니다.
+			</p>
+		</div>
+	</div>
+
+	<div class="mssPopup">
+		<a onclick="window.open('http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_pop1.html', '성분', 'width=640, height=800, scrollbars=yes'); return false;" href="javascript:void(0);">
+			<span>트루케어 무기자차 선크림 바른 성분 표시 보기</span>
+		</a>
+	</div> -->
+	
+	<div class="prdType prdType69">
+		<div class="box01">
+			<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_25/img16.jpg" alt="" /></div>
+			<div class="descWrap vCenter">
+				<h4 class="tit">논나노 논코메도 무기자차 선크림 사용 TIP</h4>
+				<ol>
+					<li>
+						<h5>하나. 메이크업 전 자연스러운 톤-업 효과</h5>
+						<p>피부 톤을 균일하게 가꾸어, 메이크업 베이스 대신 사용해도 좋으며<br class="pcBr" /> 수분감 있는 텍스처가 모공 끼임 없이 매끈하게 메이크업을 준비시켜 줍니다.</p>
+					</li>
+					<li>
+						<h5>둘. 파데 FREE! 파운데이션이 답답한 날 바르기 좋은 톤-업 효과</h5>
+						<p>수분에센스가 함유된 텍스처가 촉촉하고 가볍게 밀착되어 두꺼운 파운데이션이<br class="pcBr" /> 없어도 맨 얼굴처럼 자연스러우면서도 균일한 톤-업 효과를 선사합니다.</p>
+					</li>
+					<li>
+						<h5>선크림 찰떡궁합 아이템! 수분 미스트</h5>
+						<p>선크림 사용 후 수분 미스트를 마지막 단계에서 고르게 분사하여 마무리해주면<br class="pcBr" /> 환한 윤광 피부를 만들어 줍니다.</p>
+					</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<h3 class="subTit"><span class="ng">제품 사용 전 참고해주세요</span><em>Q&amp;A</em></h3>
+
+	<div class="prdType userType04">
+		<div class="descWrap">
+			<h4 class="tit">1. 무기자차? 유기자차?<span class="mBr"><br />&nbsp;&nbsp;&nbsp;</span> 어떻게 다른가요?</h4>
+		</div>
+		<div class="imgWrap">
+			<div><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img05_1.jpg" alt="무기차단제(물리적)" /></div>
+			<div><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img05_2.jpg" alt="유기차단제(화학적)" /></div>
+		</div>
+		<div class="descWrap">
+			<h4 class="tit mt35">2. 선크림은 500원 동전만큼<span class="mBr"><br />&nbsp;&nbsp;&nbsp;</span> 발라야 하지 않나요?</h4>
+		</div>
+		<div class="conBottom">
+			<div class="imgWrap imgCrop">
+				<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img05_4.jpg" alt="1.5cm / 약0.8g" />
+			</div>
+			<div class="descWrap vCenter">
+				<ol>
+					<li>1. 자외선 차단 제품의 인체 적용 시험 진행 시 얼굴 전체에 동일한 두께가<br class="pcBr" /> 도포될 수 있도록 사용량이 ‘2mg/㎠’로 진행됩니다. 이를 한국인 평균 얼굴<br class="pcBr" /> 면적인 404.4~455.9㎠에 대입을 시키면 약 0.8g이 1회 선크림<br class="pcBr" /> 적정량이라고 볼 수 있습니다. 트루케어 논나노 무기자차의 경우,<br class="pcBr" /> 약 1.5cm 지름의 원 크기로 사용시에 적정량인 0.8g 정도에 해당하며<br class="pcBr" /> 이는 동전 10원 크기(지름 1.8cm)보다 작은 사이즈로 500원 동전만큼<br class="pcBr" /> 바를 필요는 없습니다.</li>
+
+					<li>2. 트루케어 논나노 선크림은 스킨 핏 프로텍트 텍스쳐의 자연스러운<br class="pcBr" /> 톤업 효과를 선사합니다. 백탁을 없애고 사용감을 좋게 하기 위해 자외선 차단<br class="pcBr" /> 성분을 더 작게 분해할 수도 있지만 트루케어 선크림은 논-나노 사이즈 성분을<br class="pcBr" /> 사용하여 같은 무기자차 선크림을 바르더라도 톤업 효과가 더욱 뛰어납니다.</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="prdType userType10">
+		<div class="title"><span>트루케어 논나노 논코메도<br class="mBr" /> 무기자차 SPF48 PA+++<br class="mBr" /> 바른 성분 표시</span></div>
+		<div class="imgWrap pcVer"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img13.jpg" alt=""></div>
+		<div class="imgWrap moVer"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img13_m.jpg" alt=""></div>
+	</div>
+
+	<h3 class="subTit"><em>논나노 논코메도 무기자차<br class="mBr"> 자가설문조사 결과</em></h3>
+
+	<div class="prdType">
+		<div class="imgWrap pcVer"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img18_AD.jpg" alt=""></div>
+		<div class="imgWrap moVer"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img18_m_AD.jpg" alt=""></div>
+	</div>
+
+	<div class="prdType userType06">
+		<div class="movie">
+			<video width="100%" controls>
+				<source src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/non-nano sunscreen_01_product_video.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="descWrap">
+			<div class="vCenter">
+				<h4 class="tit">사용TIP</h4>
+				<ol>
+					<li><span>1.</span> <em>지름 1.5cm 사이즈의 원에 해당하는 양(약 0.8g)을 덜어서 부드럽게 펴 발라줍니다.<br /> 입자가 큰 논나노 선크림 제형 특성상, 한 번에 많이 바르기보다 이마, 코, 양 볼 등 얼굴 부위에 소량씩 나눠서 소량씩 꼼꼼히 발라주세요.</em></li>
+					<li><span>2.</span> <em>자외선 차단 성분이 피부 위에 고루 도포될 수 있도록 천천히 두드리면서 피부에 밀착시켜주세요.</em></li>
+					<li><span>3.</span> <em>자연스러운 톤업 효과로 다음 단계 페이스 메이크업까지 생기 있게 만들어 줍니다.</em></li>
+					<li><span>4.</span> <em>자외선 차단제는 말 그대로 차단제라서 에센스처럼 피부 속 깊이 흡수되는 것이 아닙니다.<br /> 기초화장 맨 마지막 단계에서 피부 결을 따라 부드럽게 펴 발라 보호막으로 남아 있게 해주세요.</em></li>
+					<li><span>5.</span> <em>어깨와 팔이 드러난 옷을 입고 외출한다면 반드시 데콜테와 어깨, 목, 팔, 손에도 차단제를 발라 주세요. 목과 데콜테의 피부는 매우 얇고 피지 분비량이 적기 때문에 자외선의 공격에 약합니다.</em></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="prdType userType05">
+		<ul>
+			<li><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_25/img07_1.jpg" /></li>
+			<li><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_25/img07_2.jpg" /></li>
+			<li><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_25/img07_3.jpg" /></li>
+		</ul>
+	</div> -->
+
+	<div class="prdType prdTableType">
+		<table class="pcVer">
+			<colgroup>
+				<col width="*">
+				<col width="30%">
+				<col width="30%">
+				<col width="30%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th colspan="4"><strong>트루케어 논나노 논코메도 무기자차!</strong> 원하는 용량을 골라서 사용하세요!</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>제품</th>
+					<td><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_80ml/img09_1.jpg" alt=""></td>
+					<td><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_80ml/img09_2.jpg" alt=""></td>
+					<td><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_80ml/img09_3.jpg" alt=""></td>
+				</tr>
+				<tr>
+					<th>용량</th>
+					<td>25mL</td>
+					<td>50mL</td>
+					<td>80mL</td>
+				</tr>
+				<tr>
+					<th>가격</th>
+					<td>8,000원</td>
+					<td>15,000원</td>
+					<td>24,000원</td>
+				</tr>
+				<tr>
+					<th>특징</th>
+					<td>여행용으로 또는 외출 시 밖에서<br> 간편하게 덧바를 수 있는 소용량 선 크림</td>
+					<td>화장대에 두고 사용하는 합리적인 용량의 선크림</td>
+					<td>여름철 페이스 & 바디에 골고루 넉넉하게 바를 수 있는<br>대용량 선크림</td>
+				</tr>
+				<tr class="gf">
+					<th>&nbsp;</th>
+					<td>효능책임환불제(1ml*3개) 체험분이 증정됩니다</td>
+					<td>효능책임환불제(1ml*7개) 체험분이 증정됩니다</td>
+					<td>효능책임환불제(1ml*7개) 체험분이 증정됩니다</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="swiper-container pdtSlide pdtSlide1 moVer">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<table>
+						<colgroup>
+							<col width="30%">
+							<col width="70%">
+						</colgroup>
+						<thead>
+							<tr><th colspan="2">논나노 논코메도 무기자차 25mL</th></tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>이미지</th>
+								<td><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_80ml/img09_1.jpg" alt=""></td>
+							</tr>
+							<tr>
+								<th>용량</th>
+								<td>25mL</td>
+							</tr>
+							<tr>
+								<th>가격</th>
+								<td>8,000원</td>
+							</tr>
+							<tr>
+								<th>특징</th>
+								<td>여행용으로 또는 외출 시<br> 밖에서 간편하게 덧바를 수 있는<br> 소용량 선 크림</td>
+							</tr>
+							<tr>
+								<th>&nbsp;</th>
+								<td>효능책임환불제(1ml*3개)<br> 체험분이 증정됩니다</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="swiper-slide">
+					<table>
+						<colgroup>
+							<col width="30%">
+							<col width="70%">
+						</colgroup>
+						<thead>
+							<tr><th colspan="2">논나노 논코메도 무기자차 50mL</th></tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>이미지</th>
+								<td><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_80ml/img09_2.jpg" alt=""></td>
+							</tr>
+							<tr>
+								<th>용량</th>
+								<td>50mL</td>
+							</tr>
+							<tr>
+								<th>가격</th>
+								<td>15,000원</td>
+							</tr>
+							<tr class="pd2">
+								<th>특징</th>
+								<td>화장대에 두고 사용하는<br> 합리적인 용량의 선크림</td>
+							</tr>
+							<tr>
+								<th>&nbsp;</th>
+								<td>효능책임환불제(1ml*7개)<br> 체험분이 증정됩니다</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="swiper-slide">
+					<table>
+						<colgroup>
+							<col width="30%">
+							<col width="70%">
+						</colgroup>
+						<thead>
+							<tr><th colspan="2">논나노 논코메도 무기자차 80mL</th></tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>이미지</th>
+								<td><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen_80ml/img09_3.jpg" alt=""></td>
+							</tr>
+							<tr>
+								<th>용량</th>
+								<td>80mL</td>
+							</tr>
+							<tr>
+								<th>가격</th>
+								<td>24,000원</td>
+							</tr>
+							<tr>
+								<th>특징</th>
+								<td>여름철 페이스 & 바디에<br> 골고루 넉넉하게 바를 수 있는<br>대용량 선크림</td>
+							</tr>
+							<tr>
+								<th>&nbsp;</th>
+								<td>효능책임환불제(1ml*7개)<br> 체험분이 증정됩니다</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="swiper-pagination slidePage"></div>
+			<div class="swiper-btn">
+				<a href="javascript:void(0);" class="slidePauseBtn on">제어</a>
+			</div>
+		</div>
+	</div>
+
+	<h3 class="subTit">
+		<!-- <span class="ng">자연에서 찾은 효능 성분을 최적 배합해<br class="mBr" /> 피부에 좋은 성분을 담았습니다</span> -->
+		<em>트루케어 라인 STORY</em>
+	</h3>
+
+	<div class="prdType prdType71">
+		<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img08.jpg" alt=""></div>
+		<div class="descWrap">
+			<div class="left">
+				<h4 class="tit">퓨어 액티브 포뮬라</h4>
+				<p>불필요한 성분은 빼고 자연 유래 성분은 높여<br class="pcBr" /> 최적 배합한 순수 피부 지향 포뮬라입니다.</p>
+			</div>
+			<div class="center">
+				<h4 class="tit">효능 책임 환불제</h4>
+				<p>이니스프리는 99명에게 좋은 화장품도<br class="pcBr" /> 단 1명에게는 맞지 않을 수 있음을 알고 있습니다.<br /> 써보고 직접 경험해보세요.<br /> 효능을 느끼지 못하셨다면 100% 무료 환불을<br class="pcBr" /> 보장합니다.</p>
+			</div>
+			<div class="right">
+				<h4 class="tit">바른 성분 표시제</h4>
+				<p>모든 제품의 전 성분 및 성분 별 배합 목적을 명시하여<br class="pcBr" /> 알기 쉽고 투명하게 제품 성분을 확인할 수 있습니다.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="mssPopup mssPopup2">
+		<a onclick="pdtDetailLink();" href="javascript:void(0);">
+			<span>효능 책임 환불제 더 알아보기</span>
+		</a>
+
+		<div class="userEtc">
+			<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_non-nano_sunscreen/img_etc.jpg" alt=""></div>
+			<div class="descWrap vCenter">
+				효능 책임 환불제를 위해 본품 구매시 1mL x 3개를 드립니다.<br />
+				본품을 개봉하지 마시고 꼭 샘플 먼저 사용해주세요.<br />
+				사용 후 피부에 맞지 않으시거나 효능에 만족하지 못하시는 분들께는<br class="pcBr" />
+				미개봉 본품을 100% 환불해드립니다. (구매 후 14일 이내)
+			</div>
+		</div>
+	</div>
+
+	<!-- 제품라인 -->
+	<!--<div class="prdLine">
+		<div class="descWrap">
+			<h4 class="tit">이니스프리 트루 케어 라인</h4>
+			<ol>
+				<li class="last">  
+					<p class="image" style="width:640px; max-width:280px"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_2.jpg" alt=""></p>
+					<p class="txt" style="width:280px; max-width:280px">스킨-리셋 3스텝 마스크 <br />[건성용] / [지성용]</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_1.jpg" alt=""></p>
+					<p class="txt">시카 인텐시브 밤 40ml</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_3.jpg" alt=""></p>
+					<p class="txt">모이스트 리커버리 <br />로션 200ml</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_4.jpg" alt=""></p>
+					<p class="txt">모이스트 리커버리 <br />크림 100ml</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_11.jpg" alt=""></p>
+					<p class="txt">모이스트 리커버리 <br />밀크 오일 30ml</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_12.jpg" alt=""></p>
+					<p class="txt">모이스트 리커버리 <br />립밤 4g</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_5.jpg" alt=""></p>
+					<p class="txt">비타 에센셜 밤 <br />40ml</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_7.jpg" alt=""></p>
+					<p class="txt">오일 프리 밤 <br />40ml</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_6.jpg" alt=""></p>
+					<p class="txt">논나노 논코메도<br />무기자차 선크림 50ml</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_8.jpg" alt=""></p>
+					<p class="txt">트루케어 칼라민 <br />6.5 클렌저 200g</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_9.jpg" alt=""></p>
+					<p class="txt">트루케어 칼라민 <br />6.5 클렌저 400g</p>
+				</li>
+				<li class="last">  
+					<p class="image"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_10.jpg" alt=""></p>
+					<p class="txt">트루케어 판테놀 10<br /> 수분 스킨 250ml</p>
+				</li>
+			</ol>
+		</div>
+	</div>
+
+	<div class="prdLineM">
+		<h4 class="tit"><strong>이니스프리 트루 케어 라인</strong></h4>
+		<ol class="prdSlider customDot">
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_2_m.jpg" alt=""></div>
+				<p>스킨-리셋 3스텝 마스크 [건성용] / [지성용]</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_1_m.jpg" alt=""></div>
+				<p>시카 인텐시브 밤 40ml</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_3_m.jpg" alt=""></div>
+				<p>모이스트 리커버리 로션 200ml</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_4_m.jpg" alt=""></div>
+				<p>모이스트 리커버리 크림 100ml</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_11_m.jpg" alt=""></div>
+				<p>모이스트 리커버리 밀크 오일 30ml</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_12_m.jpg" alt=""></div>
+				<p>모이스트 리커버리 립밤 4g</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_5_m.jpg" alt=""></div>
+				<p>트루케어 비타 에센셜 밤 40ml</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_7_m.jpg" alt=""></div>
+				<p>오일 프리 밤 40ml</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_6_m.jpg" alt=""></div>
+				<p>트루케어 논나노 논코메도<br class="mBr"> 무기자차 선크림 SPF48 PA+++ 50ml</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_8_m.jpg" alt=""></div>
+				<p>칼라민 6.5 클렌저 200g</p>
+			</li>
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_9_m.jpg" alt=""></div>
+				<p>칼라민 6.5 클렌저 400g</p>
+			</li>						
+			<li>
+				<div class="imgWrap"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/prdLine01_10_m.jpg" alt=""></div>
+				<p>트루케어 판테놀 10 수분 스킨 250ml</p>
+			</li>
+		</ol>
+	</div>-->
+	<!-- //제품라인 -->
+	
+	<div class="prdType commonType01">
+		<div class="imgWrap pcVer"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_zone.png" alt=""></div>
+		<div class="descWrap moVer"><img src="http://www.innisfree.com/kr/ko/upload/pdtDetail/skinCare/trueCare/trueCare_zone_m.png" alt=""></div>
+	</div>
+
+	<script type="text/javascript">
+		function pdtDetailLink(){
+			if (_Device.type == 0) {	//웹
+				window.open("http://www.innisfree.com/kr/ko/EventView.do?eventSeq=120&viewPageYn=Y&procStat=2");
+			} else {	//태블릿/모바일
+				location.href="http://m.innisfree.com/kr/ko/mEventView.do?eventSeq=120&viewPageYn=Y&procStat=2";
+			}
+		}
+		var eSlideObj = {}
+		function pdtD_Slide(obj) {
+			var pdtD_SlideBtn = $('.'+obj).find('.swiper-btn');
+			
+			pdtD_SlideBtn.on('click', function(){
+				var $this = $(this);
+				if($this.hasClass('stop')) {
+					$this.removeClass('stop');
+					pdtD_ObjSlide.autoplay.start();
+				} else {
+					$this.addClass('stop');
+					pdtD_ObjSlide.autoplay.stop();
+				}
+			});
+			var pdtD_ObjSlide = new Swiper('.' + obj, {
+				loop: true,
+				speed: 800,
+				spaceBetween: 15,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.' + obj + ' .slidePage',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.next-btn',
+					prevEl: '.prev-btn',
+				},
+			});
+			eSlideObj[obj] = pdtD_ObjSlide;
+		}
+		pdtD_Slide('pdtSlide1');
+	</script>
+</div>
+<!-- content E -->

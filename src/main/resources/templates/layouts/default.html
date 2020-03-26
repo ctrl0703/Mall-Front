@@ -4,13 +4,22 @@
 <!-- head -->
 <head th:replace="fragments/config :: configFragment"></head>
 
-<!-- header -->
-<header th:replace="fragments/header :: headerFragment"></header>
-
-<!-- body -->
-<div layout:fragment="content"></div>
-
-<!-- footer -->
-<footer th:replace="fragments/footer :: footerFragment"></footer>
+<body>
+	<div class="super_container">
+		
+		<!-- header -->
+		<header th:replace="fragments/header :: headerFragment"></header>
+		
+		<!-- body -->
+		<div layout:fragment="content"></div>
+		
+		<!-- footer -->
+		<footer th:replace="fragments/footer :: footerFragment"></footer>
+		
+		<!-- copyright -->
+		<div th:replace="fragments/copyright :: copyrightFragment"></div>
+		
+	</div>
+</body>
 
 </html>

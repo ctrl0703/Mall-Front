@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="/layouts/default">
+
+<!-- product.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+	<link rel="stylesheet" type="text/css" href="/styles/product_styles.css">
+	<link rel="stylesheet" type="text/css" href="/styles/product_responsive.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/styles/innimall_common.css"> -->
+	<link rel="stylesheet" type="text/css" href="/styles/innimall_prdDetail.css">
+</th:block>
+
+<div layout:fragment="content">
+	
+	<!-- Single Product -->
+
+	<div class="single_product">
+		<div class="container">
+			<div class="row">
+
+				<!-- Selected Image -->
+				<div class="col-lg-6 order-lg-2 order-1">
+					<div class="image_selected"><img th:src="${product.imageUrl}" alt=""></div>
+					<div class="review mx-auto">
+						<span class="reviewPointM"><span style="width: calc(100% / 5 * 4.6);"></span></span>
+						<span class="reviewNum h3">4.6</span>
+						<span class="reviewLength">(<span class="num">274</span>건)</span>
+					</div>
+				</div>
+
+				<!-- Description -->
+				<div class="col-lg-6 order-3">
+					<div class="product_description">
+						<div class="product_category" th:text="${product.header}"></div>
+						<div class="product_name" th:text="${product.name}"></div>
+						<div class="product_text"><p th:text="${product.basicDescription}"></p></div>
+						<div class="product_hashtag">
+							<span class="badge badge-pill badge-outline" th:each="hashTag : ${product.hashTagList}" th:text="${hashTag}"></span>
+						</div>
+						<hr>
+						
+						<div>
+							<dl class="row">
+								<dt class="col-sm-3">판매가</dt>  
+								<dd class="col-sm-9"><strong class="text-dark h4" th:text="${#numbers.formatInteger(product.price,3,'COMMA')}"></strong><strong>원</strong></dd>
+							</dl>
+							<dl class="row"><dt class="col-sm-3">배송비</dt><dd class="col-sm-9">무료배송</dd></dl>
+							<dl class="row">
+								<dt class="col-sm-3">유의사항</dt>
+								<dd class="col-sm-9">
+									<!-- <h6 class="text-danger">구매수량제한/쿠폰 사용불가</h6> -->
+									<h6 th:text="${product.useCareDescription}"></h6>
+								</dd>
+							</dl>
+						</div>
+						
+						<div class="order_info d-flex flex-row">
+							<form action="#">
+								<div class="clearfix" style="z-index: 1000;">
+
+									<!-- Product Color -->
+									<ul class="product_color" th:if="${#lists.size(product.options) > 1}">
+										<li>
+											<span>옵션: </span>
+											<div class="color_mark_container"><div id="selected_color"></div></div>
+											<div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>
+
+											<ul class="color_list">
+												<li th:each="option : ${product.options}"><div th:text=${option.name}></div></li>
+											</ul>
+										</li>
+									</ul>
+
+									<!-- Product Quantity -->
+									<div class="product_quantity clearfix" th:if="${#lists.size(product.options) > 1}">
+										<span>수량: </span>
+										<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+										<div class="quantity_buttons">
+											<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+											<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="product_price">
+									<dl class="row">
+										<dt>합계</dt>
+										<dd><strong class="text-dark h4" th:text="${#numbers.formatInteger(product.price,3,'COMMA')}"></strong><strong>원</strong></dd>
+									</dl>
+								</div>
+								<div class="button_container">
+									<div class="product_fav"><i class="fas fa-heart"></i></div>
+									<button type="button" class="button cart_button">장바구니</button>
+									<button type="button" class="button order_button">바로구매</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Recently Viewed -->
+
+	<div class="viewed" th:if="${#lists.size(sameLineProducts) > 1}">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="viewed_title_container">
+						<h3 class="viewed_title">이 제품과 같은 라인</h3>
+						<div class="viewed_nav_container">
+							<div class="viewed_nav viewed_prev"><i class="fas fa-chevron-left"></i></div>
+							<div class="viewed_nav viewed_next"><i class="fas fa-chevron-right"></i></div>
+						</div>
+					</div>
+
+					<div class="viewed_slider_container">
+						
+						<!-- Recently Viewed Slider -->
+
+						<div class="owl-carousel owl-theme viewed_slider">
+							
+							<!-- Recently Viewed Item -->
+							<div class="owl-item" th:each="sameLineProduct : ${sameLineProducts}">
+								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+									<div class="viewed_image"><img th:src="${sameLineProduct.imageUrl}" alt=""></div>
+									<div class="viewed_content text-center">
+										<div class="viewed_price" th:text="${sameLineProduct.price} + '원'"><span></span></div>
+										<div class="viewed_name"><a href="#" th:text="${sameLineProduct.name}"></a></div>
+									</div>
+									<ul class="item_marks">
+										<li class="item_mark item_discount">-25%</li>
+										<li class="item_mark item_new">new</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="detail">
+		<div class="container">
+		
+			<div class="row">
+				<div class="col">
+					<nav>
+						<div class="nav nav-tabs" id="nav-tab" role="tablist">
+							<a class="nav-item nav-link active" data-toggle="tab" href="#nav-detail" aria-selected="true">상세 정보</a>
+							<a class="nav-item nav-link" data-toggle="tab" href="#nav-caution" aria-selected="false">유의사항</a>
+							<a class="nav-item nav-link" data-toggle="tab" href="#nav-review" aria-selected="false">리뷰(218)</a>
+							<a class="nav-item nav-link" data-toggle="tab" href="#nav-contact" aria-selected="false">제품 문의</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					<div class="tab-content" id="nav-tabContent">
+					  <div class="tab-pane fade show active" id="nav-detail" role="tabpanel" aria-labelledby="nav-home-tab" th:value="${product.detailHtmlUrl}"></div>
+					  <div class="tab-pane fade" id="nav-caution" role="tabpanel" aria-labelledby="nav-profile-tab">
+						<div class="tab-content-paragraph">
+							<h3>제품요약정보</h3>
+						</div>
+						<table class="table">
+						  <tbody>
+						    <tr>
+						      <th scope="row">용량 또는 중량</th>
+						      <td th:text="${product.volume}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">제조원/책임판매원</th>
+						      <td th:text="${product.manufacturer}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">제조국</th>
+						      <td th:text="${product.manufacturedArea}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">사용기한 또는 개봉 후 사용기간</th>
+						      <td th:text="${product.useEndDate}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">사용방법</th>
+						      <td th:text="${product.useDescription}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">제품 주요 사양</th>
+						      <td th:text="${product.skin}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">기능성 화장품의 경우 화장품법에 따른 식품의약품안전처 심사 필 유무</th>
+						      <td th:text="${product.auditDescription}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">품질보증기준</th>
+						      <td th:text="${product.QADescription}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">전성분</th>
+						      <td th:text="${product.element}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">사용 시 주의사항</th>
+						      <td th:text="${product.useCareDescription}"></td>
+						    </tr>
+						    <tr>
+						      <th scope="row">소비자상담관련 전화번호</th>
+						      <td th:text="${product.ASDescription}"></td>
+						    </tr>
+						  </tbody>
+						</table>
+						<div class="tab-content-paragraph">
+							<h3>배송 구매/배송안내</h3>
+							<hr/>
+							<ol>
+								<li>배송지역 : 전국</li>
+								<li>배송비: 20,000원 이상(할인 등이 적용된 최종 결제 금액 기준) 배송비 무료, 그 외 2,500원 (도서, 산간, 오지 일부지역, 설치배송상품 등은 배송비가 추가될 수 있습니다.)</li>
+								<li>이니스프리는 CJ 택배를 이용합니다. 군부대의 경우 주문 단계에서 군부대 배송을 체크하여 주시면, 우체국 택배로 발송됩니다. 단, 택배 송장 번호 확인시 CJ 택배 송장이 표기되며, 우체국 송장 번호는 고객 상담실로 전화 주시면 확인 가능합니다.</li>
+								<li>배송예정일 : 평일 오전 9시 이전 주문 건은 당일 출고되며, 그 후 주문 건은 다음 날 출고됩니다. 보통 주문일로부터 평일 기준 2~3일 소요되며, 주말/공휴일이 포함되거나 할인 행사로 인한 주문 폭주 및 택배사의 사정 등으로 인한 경우 배송이 지연될 수 있습니다.</li>
+								<li>상품 불량 및 오배송 등으로 인한 교환/반품신청의 경우 배송비는 무료 입니다.</li>
+								<li>고객님의 단순 변심으로 인한 교환/반품 신청은 고객님께서 왕복배송비 5,000원을 부담해 주셔야 처리가 됩니다. 제일은행 325-20-460048 (주)이니스프리</li>
+								<li>주의사항 : 한정된 수량으로 더 많은 고객님들께 혜택을 드리기 위하여, 동일 주소지 대량 주문 시 1인 고객으로 집계하여 해당 아이디에 대한 주문이 제한될 수 있습니다.</li>
+							</ol>
+						</div>
+						<div class="tab-content-paragraph">
+							<h3>교환/반품안내</h3>
+							<hr/>
+							<ol>
+								<li>사은품 품절 시 공지 없이 대체상품이 발송됩니다.</li>
+								<li>주문자,수취인,전화번호,주소가 동일한 경우 자동 묶음 배송되며 사은품도 합계 구매 금액 사은품으로 배송됩니다.</li>
+								<li>이벤트 적용 및 사은품 증정은 장바구니에 담아두신 시점과 관계없이 결제 당시 사은품으로 증정됩니다.
+									<ol>
+										<li>사은품 품절 시 공지 없이 대체상품이 발송됩니다.
+											<ul>
+												<li>- 단순변심, 착오구매에 따른 교환/반품 신청은 상품을 공급받은 날부터 7일 이내 가능합니다. (배송비 고객 부담)</li>
+												<li>- 다만, 공급받은 상품이 표시/광고의 내용과 다르거나 계약내용과 다르게 이행된 경우에는 상품을 공급받은 날부터 3개월 이내, 그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내 교환/반품 신청을 하실 수 있습니다. (배송비 회사 부담)</li>
+												<li>- 교환/반품을 원하는 고객은 쇼핑몰 고객센터 (080-380-0114)에 전화하시거나 쇼핑몰의 [마이페이지>내 주문관리]를 통해 신청하시면 됩니다. 신청 후 2~3일 이내에 이니스프리 지정 택배사가 직접 방문하여 상품을 수거합니다. (반송지 주소: 경상북도 김천시 대광동 1000-2번지 아모레퍼시픽 김천물류센터 이니스프리 담당자 : 오연정)</li>
+												<li>- 해당 상품 구매 시 사은품/증정품 등이 제공된 경우, 상품 교환/반품 시 함께 보내주셔야 합니다.</li>
+												<li>- 반품 시 상품대금 환불은 상품 회수 및 청약철회가 확정된 날부터 3영업일 이내 진행되며, 기한을 초과한 경우 지연기간에 대하여 연 100분의 15를 곱하여 산정한 지연이자를 지급합니다.</li>
+											</ul>
+										</li>
+										<li>교환/반품이 불가능한 경우
+											<ul>
+												<li>- 고객에게 책임이 있는 사유로 상품이 멸실되거나 훼손된 경우(상품내용을 확인하기 위하여 포장 등을 훼손한 경우는 제외)</li>
+												<li>- 고객의 사용 또는 일부 소비로 상품 가치가 현저히 감소한 경우</li>
+												<li>- 시간이 지나 다시 판매하기 곤란할 정도로 상품 가치가 현저히 감소한 경우</li>
+												<li>- 복제가 가능한 상품의 포장을 훼손한 경우</li>
+												<li>- 고객의 주문에 따라 개별적으로 생산되는 상품 또는 이와 유사한 상품에 대하여 청약철회등을 인정하는 경우 통신판매업자에게 회복할 수 없는 중대한 피해가 예상되는 경우로서 사전에 해당 거래에 대하여 별도로 그 사실을 고지하고 고객의 서면(전자문서 포함)에 의한 동의를 받은 경우</li>
+												<li>- 오프라인 매장에서 구매한 제품은 불가능</li>
+											</ul>
+										</li>
+										<li>불만처리 및 분쟁해결
+											<ul>
+												<li>- 교환/반품/대금 환불 등에 대한 문의사항 및 불만처리 요청은 쇼핑몰 고객센터 [080-380-0114] 혹은 1:1 고객문의 게시판을 이용하세요.</li>
+												<li>- 고객센터 운영시간: (월~목) 09:00~18:00 , (금) 09:00~17:30 , 토/일/공휴일 휴무</li>
+												<li>- 본 상품의 품질보증 및 피해보상에 관한 사항은 관련 법률 및 공정거래위원회 고시 「소비자분쟁해결기준」에 따릅니다.</li>
+												<li>- 트러블에 의한 반품 시 의사의 소견서를 첨부해야 하며 기타 제반 비용은 고객님이 부담하셔야 합니다. 다만, 의사의 소견에 따라 구매 상품의 사용으로 인한 사유가 명백한 경우 소비자분쟁해결기준에 따릅니다.</li>
+											</ul>
+										</li>
+									</ol>
+								</li>
+							</ol>
+						</div>
+						<div class="tab-content-paragraph">
+							<h3>기타안내</h3>
+							<hr/>
+							※ 이 상품의 거래와 관련하여 적용되는 약관은 사이트 하단의 사이트 이용약관을 클릭하시면 확인할 수 있습니다.
+							<h5>※ 구매안전서비스 안내</h5>
+							저희 쇼핑몰은 고객님의 안전거래를 위하여 ㈜LG유플러스의 에스크로 서비스에 가입하였으며, 무통장입금에 대해 구매안전서비스를 적용하고 있습니다. [서비스가입사실확인]
+							<h5>※ 미성년자 계약 취소에 대한 안내</h5>
+							해당 상품 구매 계약자가 미성년자일 경우 법정대리인이 동의하지 아니하면 미성년자 본인 또는 법정대리인은 이 계약을 취소할 수 있습니다.
+							<br>
+							(주)이니스프리 서울특별시 용산구 한강대로 100(한강로2가) 7층 이니스프리 | 080-380-0114 | innisfree@innisfree.com
+							<br>
+							통신판매신고번호 2013-서울중구-0025
+						</div>
+					  </div>
+					  <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+					  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+					  	<div class="tab-content-paragraph">
+					  		※ 배송, 주문(취소/교환/환불)관련 문의는 고객센터 1:1 고객상담에 남겨주세요. <a>1:1 고객상담</a>
+					  	</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- product.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+	<script src="/js/product_custom.js"></script>
+</th:block>
+
+</html>

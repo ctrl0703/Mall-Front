@@ -1,0 +1,403 @@
+﻿			<!-- content S -->
+			<style type="text/css">
+				.moVer {display:none !important;}
+
+				.setList{text-align:center;}
+				.setList ul{display:inline-block;padding:43px 7% 33px;border:1px solid #e5e5e5;font-size:0;line-height:0;letter-spacing:-4px;}
+				.setList ul li{display:inline-block;width:167px;margin:0 18px;vertical-align:middle;}
+				.setList ul li .descWrap p{font-family:'notoM';font-size:16px;color:#666;line-height:24px;letter-spacing:-0.5px;}
+				.setList ul li .descWrap span{display:block;font-family:'notoR';font-size:16px;color:#666;line-height:24px;letter-spacing:-0.5px;}
+				
+				/*공통영역*/
+				.commonType01 li{overflow:hidden;}
+				.commonType01 .box01 .imgCrop{width:50%;height:293px;float:left;}
+				.commonType01 .box01 .imgCrop img{margin-left:-294px;}
+				.commonType01 .box01 .descWrap{position:relative;height:293px;margin-left:56%;word-break:keep-all;}
+				.commonType01 .box01 .descWrap em{font-family:'ngB';color:#222;}
+				.commonType01 .box02{margin-top:50px;}
+				.commonType01 .box02 .imgCrop{height:196px;margin-left:73.3%;}
+				.commonType01 .box02 .imgCrop img{margin-left:-158px;}
+				.commonType01 .box02 .descWrap{position:relative;width:73%;height:194px;float:left;letter-spacing:-0.5px;border-top:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;word-break:keep-all;}
+				
+				.commonType02 .typeList{width:100%;padding-bottom:15px;text-align:center;} 
+				.commonType02 .typeList thead th{padding:15px 0;border-right:1px solid #fff;text-transform:uppercase;font-family:'ngB';font-size:18px;background-color:#ebebeb;color:#222;}
+				.commonType02 .typeList tbody td{padding:30px 12px 0;border-right:1px solid #e1e1e1;text-align:left;letter-spacing:-0.9px;overflow:hidden;}
+				.commonType02 .typeList tbody tr:first-child td{font-size:15px;line-height:21px;text-align:center;color:#222;}
+				.commonType02 .typeList tbody td:first-child{border-left:1px solid #e1e1e1;}
+				.commonType02 .typeList tbody td em{display:block;font-family:'ngB';color:#7aacd0;}
+				.commonType02 .typeList tbody td img{width:120%;max-width:none;margin-left:-10%;}
+				.commonType02 .typeList tbody td:nth-child(3) img{width:62%;margin:0 auto;}
+				.commonType02 .typeList tbody tr.last{border-bottom:1px solid #e1e1e1;vertical-align:top;}
+				.commonType02 .typeList tbody tr.last td{padding-bottom:30px;}
+				.commonType02 .typeList tbody tr.last td.last li{margin-top:8px;}
+				.commonType02 .typeList tbody td li{position:relative;margin-top:15px;padding-left:5px;font-size:13px;line-height:1.7;}
+				.commonType02 .typeList tbody td li:first-child{margin-top:0 !important;}
+				.commonType02 .typeList tbody td li::before{width:3px;height:3px;display:block;content:'';background-color:#7aacd0;position:absolute;top:10px;left:0;}
+				.commonType02 .typeList .bd0{border:0 !important;}
+				.prdType71 .tit{font-size:23px;}
+				
+				@media screen and (max-device-width: 740px){
+					.pcVer {display:none !important;}
+					.moVer {display:block !important;}
+
+					.prdType01 .imgWrap{position:relative;padding-top:72%;overflow:hidden;}
+					.prdType01 .imgWrap img{position:absolute;top:1%;left:50%;max-width:126%;margin-left:-63%;}
+					.prdType01 .descWrap{text-align:center;}
+					.prdType01 .descWrap .tit{font-family:'notoR';font-size:15px;color:#666;line-height:22px;}
+					.setList ul{display:block;padding:33px 15px 30px;}
+					.setList ul li{width:42%;margin:0 4%;vertical-align:top;}
+					.setList ul li .imgWrap{margin:0 22px;}
+					.setList ul li .descWrap{margin-top:5px;text-align:center;}
+					.setList ul li .descWrap p{font-size:12px;line-height:17px;}
+					.setList ul li .descWrap span{font-size:12px;line-height:17px;}
+
+					/*공통영역*/
+					.commonType01 .descWrap{text-align:center;}
+					.commonType01 .box01 .imgCrop{width:auto;height:auto;float:none;}
+					.commonType01 .box01 .imgCrop img{margin-left:auto;}
+					.commonType01 .box01 .descWrap{height:auto;margin:25px 0 0 0;}
+					.commonType01 .box02{margin-top:35px;}
+					.commonType01 .box02 .imgCrop{height:auto;margin-left:0;}
+					.commonType01 .box02 .imgCrop img{margin-left:auto;}
+					.commonType01 .box02 .descWrap{width:auto;height:auto;float:none;padding:0 0 25px;margin:0 15px;}
+					
+					.commonType02_m .typeList{width:auto;margin:0 15px;text-align:center;border:1px solid #e1e1e1;} 
+					.commonType02_m .typeList thead th{padding:15px 0;text-transform:uppercase;font-family:'ngB';font-size:15px;background-color:#ebebeb;color:#222;}
+					.commonType02_m .typeList tbody{font-size:12px;line-height:17px;overflow:hidden;}
+					.commonType02_m .typeList tbody td{padding:17px 10px;font-size:12px;line-height:17px;overflow:hidden;}
+					.commonType02_m .typeList tbody tr.last td{padding:5px 10px 15px;}
+					.commonType02_m .typeList tbody tr:first-child td{color:#222;}
+					.commonType02_m .typeList tbody td em{display:block;font-family:'ngB';color:#7aacd0;}
+					.commonType02_m .typeList tbody td li{margin-top:10px;}
+					.commonType02_m .typeList.step05 tbody tr.last td li{margin-top:5px;}
+					.commonType02_m .typeList tbody td li:first-child{margin-top:0 !important;}
+					.commonType02_m .typeList tbody td em::before{width:3px;height:3px;margin:0 5px 2px 0;display:inline-block;content:'';background-color:#7aacd0;}
+					/*.commonType02 .typeList tbody .last td{padding:15px 0 35px;}*/
+					.prdType71 .descWrap{text-align:center;}
+					.prdType71 .tit{font-size:18px;}
+				}
+			</style>
+			
+			<div class="prdDetailConWrap">
+				<h3 class="subTit mgt0"><span class="ng">제주에서 온 원료를 담아 만들었습니다</span><em>제주 헤리티지 세트_<br class="mBr">포레스트 포맨</em></h3>
+				
+				<div class="prdType prdType01">
+					<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/promotion/heritageSet/heritageSet_forestForMen/img01.jpg" alt=""></div>
+					<div class="descWrap">
+						<h4 class="tit mt35">제주 곶자왈에서 찾은<br class="mBr"> 피부 보호막을 선사하는 블랙이스트<br class="mBr"> 성분으로<br class="pcBr"> 산뜻하고 청량한 수분을<br class="mBr"> 피부에 공급해보세요!</h4>
+					</div>
+				</div>
+				<h3 class="subTit"><em>[구성품]</em></h3>
+				<div class="prdType setList">
+					<ul>
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/promotion/heritageSet/heritageSet_forestForMen/img02_1.jpg" alt=""></div>
+							<div class="descWrap">
+								<p>포레스트 포맨<br>프레시 스킨</p>
+								<span>180mL(본품)</span>
+							</div>
+						</li>
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/promotion/heritageSet/heritageSet_forestForMen/img02_2.jpg" alt=""></div>
+							<div class="descWrap">
+								<p>포레스트 포맨<br>프레시 로션</p>
+								<span>140mL(본품)</span>
+							</div>
+						</li>
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/promotion/heritageSet/heritageSet_forestForMen/img02_3.jpg" alt=""></div>
+							<div class="descWrap">
+								<p>포레스트 포맨<br>쉐이빙&클렌징 폼</p>
+								<span>50mL(증정)</span>
+							</div>
+						</li>
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/promotion/heritageSet/heritageSet_forestForMen/img02_4.jpg" alt=""></div>
+							<div class="descWrap">
+								<p>포레스트 포맨<br>프레시 에센스</p>
+								<span>25mL(증정)</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!--공통영역-->
+				<h3 class="subTit"><span class="ng">건강한 피부 보호막을 만들어주는</span><em>곶자왈 블랙이스트(Black Yeast)</em></h3>
+
+				<ul class="prdType commonType01">
+					<li class="box01">
+						<div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/forest_common01_1.jpg" alt="" /></div>
+						<div class="descWrap">
+							<div class="vCenter">
+								<p>
+									자연림(곶) + 자갈(자왈)의 제주도 방언으로<br class="mBr"> 원시림, 환상숲 같기도 한 <em>제주 곶자왈에는<br class="mBr"> 외부로부터 자신을 지키기 위해 보호 물질을<br class="mBr"> 생성하는 이로운 미생물</em>이 있습니다.<br />
+									<em>이 미생물을 정성스레 분리하여 두 번 더<br class="mBr"> 발효하면 피부에 건강한 보호막을 생성해주는<br class="mBr"> 블랙이스트(흑효모 발효물)로 탄생</em>합니다.<br />
+									<br />
+									블랙이스트를 함유한 포레스트 포맨이 스트레스,<br class="mBr"> 음주, 외부환경 등으로 <em>연약해진 남성 피부의 장벽<br class="mBr"> 강화에 도움</em>을 주어 건강한 피부로 가꾸어 줍니다.
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="box02">
+						<div class="descWrap">
+							<div class="vCenter">
+								<h4 class="tit">제주 곶자왈 생태계 보존을 위한 노력</h4>
+								<p>
+									이니스프리는 2012년부터 매년<br class="mBr"> 포레스트 포맨 제품 판매 수익금의 일부를<br class="mBr"> '곶자왈공유화재단'에 전달하여,<br class="mBr"> 사유지로 남아있는 곶자왈을 매입· 보전하여<br class="mBr"> 무분별한 개발로 훼손되는 것을 방지하고<br class="mBr"> 곶자왈의 가치를 우리 모두가 공유하기 위한<br class="mBr"> ‘곶자왈 공유화 운동’에 함께 하고 있습니다.<br> 이니스프리는 앞으로도 제주 환경의 허파인<br class="mBr"> 곶자왈을 보존하는 푸른 생명운동에<br class="mBr"> 고객 여러분들과 함께 하겠습니다.
+								</p>
+							</div>
+						</div>
+						<div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/forest_common01_2.jpg" alt="" /></div>
+					</li>
+				</ul>		
+
+				<h3 class="subTit"><span class="ng">완전히 새로워진</span><em>포레스트 포맨</em></h3>
+
+				<div class="prdType prdType71">
+					<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/forest_common02.jpg" alt=""></div>
+					<div class="descWrap">
+						<div class="left">
+							<h4 class="tit">곶자왈 피부 보호 성분</h4>
+							<p>제주 곶자왈에서 새롭게 발견하고 연구해<br>
+								담아 낸 블랙이스트(Black Yeast) 성분은<br> 피부 보호막을 만들어주어<br class="pcBr"> 연약해진<br class="mBr"> 남성 피부를 건강하게<br class="pcBr"> 케어해 줍니다.</p>
+						</div>
+						<div class="center">
+							<h4 class="tit">남성 피부를 위한 라인업</h4>
+							<p>피부 고민별 솔루션을 제공하는<br> 올인원 에센스 4종을 중심으로,<br> 클렌저와 수분 펌핑업을 위한<br> 기초 아이템 및 자외선 차단제를<br class="pcBr"> 구성하여<br class="mBr"> 꼭 필요한 아이템을 제안합니다.</p>
+						</div>
+						<div class="right">
+							<h4 class="tit">편의성을 고려한 세련된 패키징</h4>
+							<p>부드럽고 깔끔한 바디에 포인트 컬러로<br> 엣지감을 살려 어디에서나 잘 어울리는<br> 디자인으로 한 손에 들어오는 패키징은<br> 남성 고객의 사용 편의성을 높였습니다.</p>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="subTit"><span class="ng">꼭 필요한 아이템을 제안하는</span><em>포레스트 포맨 라인업</em></h3>
+
+				<!-- pcVer -->
+				<div class="prdType commonType02 pcVer">
+					<table class="typeList" cellpadding="0" border="0" summary="포레스트 포맨 라인업">
+						<caption>포레스트 포맨 라인업</caption>
+						<colgroup>
+							<col width="16.5%">
+							<col width="16.5%">
+							<col width="16%">
+							<col width="18%">
+							<col width="16.5%">
+							<col width="16.5%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Cleanse<br /> Step 0</th>
+								<th>Pump Up<br /> Step ½</th>
+								<th colspan="2">Intense Care<br /> Step 1</th>
+								<th>Protect<br /> Step 2</th>
+								<th class="bd0">Complete<br /> Step +α</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ngB">시작이 반 피부 관리 첫걸음<br /> 데일리 클렌징</td>
+								<td class="ngB">피부가 마시는 수분 보충제<br /> 기초 아이템</td>
+								<td colspan="2" class="ngB">한 번의 펌핑으로 내 피부 고민 해결<br /> 올인원 에센스 4종</td>
+								<td class="ngB">험난한 세상 스스로 지키는<br /> 자외선 차단제</td>
+								<td class="ngB">한 끗 차이로 깔끔 단정<br /> 현실 훈남 그루밍 케어</td>
+							</tr>
+							<tr>
+								<td><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step01.jpg" alt="Cleanse Step 0"></td>
+								<td><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step02.jpg" alt="Pump Up Step ½"></td>
+								<td colspan="2"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step03.jpg" alt="Intense Care Step 1"></td>
+								<td><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step04.jpg" alt="Protect Step 2"></td>
+								<td><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step05.jpg" alt="Complete Step +α"></td>
+							</tr>
+							<tr class="last">
+								<td>
+									<ul>
+										<li><em>포레스트 포맨 버블 클렌저</em>데일리 필링, 약산성 포뮬러</li>
+										<li><em>포레스트 포맨<br> 쉐이빙 &  클렌징 폼</em>밀착 거품의 쉐이빙 전후 케어</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li><em>포레스트 포맨 프레시 스킨</em></li>
+										<li class="mgt0"><em>포레스트 포맨 프레시 로션</em>기초 수분 공급 케어</li>
+										<li><em>포레스트 포맨 모이스처 크림</em>기초 보습 케어</li>
+									</ul>
+								</td>
+								<td class="bd0">
+									<ul>
+										<li><em>포레스트 포맨<br> 포어 케어 올인원 에센스</em>펩타이드의 모공 케어로<br> 번들거림 없이 산뜻한 피부</li>
+										<li><em>포레스트 포맨<br> 트러블 케어 올인원 에센스</em>살리실산, 티트리오일의<br> 피부 고민 케어, 깨끗한 피부</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li><em>포레스트 포맨<br> 센서티브 올인원 에센스</em>센텔라아시아티카 성분의<br> 시카 케어로 편안한 피부</li>
+										<li><em>포레스트 포맨<br> 안티에이징 올인원 에센스</em>주름개선 미백 성분의<br> 안티에이징 케어로 탄탄한 피부</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li><em>포레스트 포맨 노세범<br> 선블록 SPF50+ PA++++</em>백탁 없이 산뜻하게<br> 피지 잡아주는 선블록</li>
+									</ul>
+								</td>
+								<td class="last">
+									<ul>
+										<li><em>포레스트 포맨 그루밍<br> BB 크림 2종</em></li>
+										<li><em>포레스트 포맨 그루밍<br> 컬러드 립밤</em></li>
+										<li><em>포레스트 포맨 그루밍<br> 브로우 메이커</em></li>
+										<li><em>포레스트 포맨 헤어 왁스 3종</em></li>
+										<li><em>포레스트 포맨 헤어 스프레이</em></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<!-- moVer -->
+				<div class="prdType commonType02_m moVer">
+					<table class="typeList step01" cellpadding="0" border="0" summary="포레스트 포맨 라인업">
+						<caption>포레스트 포맨 라인업</caption>
+						<colgroup>
+							<col width="">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Cleanse Step 0</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ngB">시작이 반 피부 관리 첫걸음<br /> 데일리 클렌징</td>
+							</tr>
+							<tr>
+								<td><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step01.jpg" alt="Cleanse Step 0"></td>
+							</tr>
+							<tr class="last">
+								<td>
+									<ul>
+										<li><em>포레스트 포맨 버블 클렌저</em>데일리 필링, 약산성 포뮬러</li>
+										<li><em>포레스트 포맨 쉐이빙 &  클렌징 폼</em>밀착 거품의 쉐이빙 전후 케어</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="typeList step02" cellpadding="0" border="0" summary="포레스트 포맨 라인업">
+						<caption>포레스트 포맨 라인업</caption>
+						<colgroup>
+							<col width="100%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Pump Up Step ½</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ngB">피부가 마시는 수분 보충제<br /> 기초 아이템</td>
+							</tr>
+							<tr>
+								<td><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step02.jpg" alt="Pump Up Step ½"></td>
+							</tr>
+							<tr class="last">
+								<td>
+									<ul>
+										<li><em>포레스트 포맨 프레시 스킨</em></li>
+										<li class="mgt0"><em>포레스트 포맨 프레시 로션</em>기초 수분 공급 케어</li>
+										<li><em>포레스트 포맨 모이스처 크림</em>기초 보습 케어</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="typeList step03" cellpadding="0" border="0" summary="포레스트 포맨 라인업">
+						<caption>포레스트 포맨 라인업</caption>
+						<colgroup>
+							<col width="100%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Intense Care Step 1</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ngB">한 번의 펌핑으로 내 피부 고민 해결<br /> 올인원 에센스 4종</td>
+							</tr>
+							<tr>
+								<td><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step03.jpg" alt="Intense Care Step 1"></td>
+							</tr>
+							<tr class="last">
+								<td>
+									<ul>
+										<li><em>포레스트 포맨<br> 포어 케어 올인원 에센스</em>펩타이드의 모공 케어로<br> 번들거림 없이 산뜻한 피부</li>
+										<li><em>포레스트 포맨<br> 트러블 케어 올인원 에센스</em>살리실산, 티트리오일의<br> 피부 고민 케어, 깨끗한 피부</li>
+										<li><em>포레스트 포맨<br> 센서티브 올인원 에센스</em>센텔라아시아티카 성분의<br> 시카 케어로 편안한 피부</li>
+										<li><em>포레스트 포맨<br> 안티에이징 올인원 에센스</em>주름개선 미백 성분의<br> 안티에이징 케어로 탄탄한 피부</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="typeList step04" cellpadding="0" border="0" summary="포레스트 포맨 라인업">
+						<caption>포레스트 포맨 라인업</caption>
+						<colgroup>
+							<col width="100%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Protect Step 2</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ngB">험난한 세상 스스로 지키는<br /> 자외선 차단제</td>
+							</tr>
+							<tr>
+								<td><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step04.jpg" alt="Protect Step 2"></td>
+							</tr>
+							<tr class="last">
+								<td>
+									<ul>
+										<li><em>포레스트 포맨 노세범<br> 선블록 SPF50+ PA++++</em>백탁 없이 산뜻하게<br> 피지 잡아주는 선블록</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="typeList step05" cellpadding="0" border="0" summary="포레스트 포맨 라인업">
+						<caption>포레스트 포맨 라인업</caption>
+						<colgroup>
+							<col width="100%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Complete Step +α</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ngB">한 끗 차이로 깔끔 단정 현실 훈남<br /> 그루밍 케어</td>
+							</tr>
+							<tr>
+								<td><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/forestForMen/step05.jpg" alt="Complete Step +α"></td>
+							</tr>
+							<tr class="last">
+								<td>
+									<ul>
+										<li><em>포레스트 포맨 그루밍 BB 크림 2종</em></li>
+										<li><em>포레스트 포맨 그루밍 컬러드 립밤</em></li>
+										<li><em>포레스트 포맨 그루밍 브로우 메이커</em></li>
+										<li><em>포레스트 포맨 헤어 왁스 3종</em></li>
+										<li><em>포레스트 포맨 헤어 스프레이</em></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--//공통영역-->
+			</div>
+			<!-- content E -->

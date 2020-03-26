@@ -1,0 +1,327 @@
+			<!-- content S -->
+			<style type="text/css">
+				.graph{margin:60px auto 80px; width:720px; border-top:5px solid #3d388b}
+				.graph dt, .graph dd{display:inline-block; *display:inline; *zoom:1; vertical-align:top;}
+				.graph dt{padding-top:10px; width:190px; font-size:28px; font-family:'ngB'; line-height:30px; letter-spacing:-0.025em; color:#3d388b; text-align:left;}
+				.graph dt span{font-size:17px; font-family:'ng';}
+				.graph dd table th{border-top:1px solid #3d388b; border-right:1px solid #3d388b; padding:10px; width:100px; font-size:20px; color:#3d388b; font-family:'ngB'; line-height:34px; text-align:left; vertical-align:top;}
+				.graph dd table td{border-top:1px solid #3d388b; padding:15px 20px; width:365px; text-align:left; vertical-align:top;}
+				.graph dd table td p{margin-top:0 !important; font-size:16px;}
+				.graph dd table td p em{display:inline-block; *display:inline; *zoom:1; padding-right:8px; color:#3d388b; font-family:'ngB'; font-size:19px;}
+				.graph dd table tr:first-child th, .graph dd table tr:first-child td{border-top:0}
+
+				.prdType03.left .descWrap{text-align:center;}
+				.prdType03.left .descWrap .vCenter{width:100%;}
+				
+				.prdType71 p span {font-size:12px; color:#999;}
+
+				.prdLine ol li .image{width:110px;margin:0 auto;}
+				.prdLine li.dftW{width:326px;}
+				.prdLine li.dftW .image{width:294px;}
+				.prdLine li.dftW .txt{max-width:326px;}
+
+				.blueberryType01 .imgWrap{height:400px;}
+				.blueberryType01 .imgWrap img{margin-left:-288px;}
+				.blueberryType01 .descWrap{width:450px;}
+				.blueberryType01 .descWrap strong{font-family:'ngB';font-weight:normal;color:#3d388b;}
+				.blueberryType01 .conT{position:relative;}
+				.blueberryType01 .conT .imgWrap{margin-right:600px;}
+				.blueberryType01 .conT .descWrap{right:0;}
+				.blueberryType01 .conB{position:relative;margin-top:35px;}
+				.blueberryType01 .conB .imgWrap{margin-left:600px;}
+				.blueberryType01 .conB .descWrap{left:120px;}
+
+				.blueberryType02 .imgLeft{height:425px;margin-right:445px;}
+				.blueberryType02 .imgLeft img{margin-left:-360.5px;}
+				.blueberryType02 .imgRight{position:absolute;right:0;top:0;}
+				.blueberryType02 .descWrap{text-align:center;}
+				.blueberryType02 .descWrap strong{font-family:'ngB';font-weight:normal;color:#3d388b;}
+
+				.blueberryType03 .imgWrap{height:440px;margin-right:601px;}
+				.blueberryType03 .imgWrap img{margin-left:-287.5px;}
+				.blueberryType03 .descWrap{right:0;width:450px;}
+
+				.blueberryType04 .imgWrap{height:939px;margin-right:451px;}
+				.blueberryType04 .imgWrap img{margin-left:-362.5px;}
+				.blueberryType04 .descWrap{right:0;width:380px;}
+				.blueberryType04 .descWrap ul{margin-top:24px;}
+				.blueberryType04 .descWrap li{position:relative;padding-left:10px;font-size:16px;font-family:'ngB';line-height:26px;color:#666;}
+				.blueberryType04 .descWrap li:before{content:'-';position:absolute;left:0;top:0;}
+
+				@media screen and (max-device-width: 740px){
+					.graph{margin:30px auto 40px; width:auto; border-top:3px solid #3d388b}
+					.graph dt, .graph dd{display:block; *display:block;}
+					.graph dt{padding:10px 15px; width:auto; font-size:18px; line-height:25px; text-align:left;}
+					.graph dt span{display:block; font-size:15px;}
+					.graph dd{border-bottom:1px solid #3d388b;}
+					.graph dd table th{padding:10px; width:70px; font-size:14px; line-height:24px;}
+					.graph dd table td{padding:10px 10px; width:auto;}
+					.graph dd table td p{font-size:13px;}
+					.graph dd table td p.txt{font-size:14px;}
+					.graph dd table td p em{display:block; *display:block; padding-right:0px; font-size:15px;}
+					.graph dd table tr:first-child th, .graph dd table tr:first-child td{border-top:1px solid #3d388b;}
+
+					.prdType03.left .descWrap{padding:35px 15px 0 15px;margin:0;border:none;text-align:left;}
+					.prdType03.left .descWrap .vCenter{width:auto;}
+
+					.prdType71 .descWrap{text-align:center;}
+					.prdType71 p span {font-size:13px;}
+
+					.blueberryType01 .imgWrap{height:auto;}
+					.blueberryType01 .imgWrap img{margin-left:0;}
+					.blueberryType01 .descWrap{width:auto;}
+					.blueberryType01 .conT .imgWrap{margin-right:0;}
+					.blueberryType01 .conB{margin-top:50px;}
+					.blueberryType01 .conB .imgWrap{margin-left:0;}
+
+					.blueberryType02 .imgLeft{height:auto;margin-right:0;}
+					.blueberryType02 .imgLeft img{margin-left:0;}
+					.blueberryType02 .imgRight{position:static;margin-top:15px;}
+					.blueberryType02 .descWrap{text-align:left;}
+
+					.blueberryType03 .imgWrap{height:auto;margin-right:0;}
+					.blueberryType03 .imgWrap img{margin-left:0;}
+					.blueberryType03 .descWrap{width:auto;text-align:center;}
+
+					.blueberryType04 .imgWrap{height:auto;margin-right:0;}
+					.blueberryType04 .imgWrap img{margin-left:0;}
+					.blueberryType04 .descWrap{width:auto;}
+					.blueberryType04 .descWrap ul{margin-top:22px;}
+					.blueberryType04 .descWrap li{font-size:15px;font-family:'ng';line-height:22px;}
+				}
+			</style>
+
+			<div class="prdDetailConWrap">
+				<h3 class="subTit mgt0"><span class="ng">수분을 채워 피부에 편안한 스킨</span><em>슈퍼푸드 블루베리<br class="mBr" /> 리밸런싱 스킨 500ml</em></h3>
+
+				<div class="prdType prdType01">
+                    <div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/blueberry_rebalancing_skin_500/img01.jpg" alt=""></div>
+                    <div class="descWrap">
+                        <h4 class="tit mgt35">블루베리의 항산화력을 담아<br class="mBr" /> 건강한 피부 pH와 유수분밸런스를 맞춰<br /> 편안한 피부로 가꿔주는 촉촉한 스킨</h4>
+                    </div>
+					<dl class="graph">
+						<dt>INGREDIENTS <span>주요 성분</span></dt>
+						<dd>
+							<table class="tbl01" summary="슈퍼푸드 블루베리 리밸런싱 스킨 INGREDIENTS 주요 성분">
+								<tbody>
+									<tr>
+										<th>1,750mg</th>
+										<td>
+											<p class="txt"><em>blueberry fruit extract</em> <span class="colorBlack ngB">블루베리 추출물</span></p>
+											<p>풍부한 항산화력으로 피부를 건강하고 탄탄하게 케어</p>
+										</td>
+									</tr>
+									<tr>
+										<th>15,000mg</th>
+										<td>
+											<p class="txt"><em>propanediol</em> <span class="colorBlack ngB">프로판디올</span></p>
+											<p>발효한 옥수수에서 유래해 피부 보습력 강화 효과</p>
+										</td>
+									</tr>
+									<tr>
+										<th>10,000mg</th>
+										<td>
+											<p class="txt"><em>glycerin</em> <span class="colorBlack ngB">글리세린</span></p>
+											<p>수분의 밸런스를 유지시켜 보습력 향상</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</dd>
+					</dl>
+                </div>
+
+				<div class="prdType blueberryType01">
+					<div class="conT">
+						<div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/blueberry_rebalancing_skin_500/img02_1.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<h4 class="tit">스킨케어의 시작, 밸런스 맞추기</h4>
+							<p>
+								<strong>시작이 좋으면 결과도 다를 거예요.</strong><br /><br />
+								피부가 가장 편안한 상태로 pH와 유수분 균형을 맞추어<br class="pcBr" />
+								건강하고 촉촉한 스킨케어를 시작하세요.
+							</p>
+						</div>
+					</div>
+					<div class="conB">
+						<div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/blueberry_rebalancing_skin_500/img02_2.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<h4 class="tit">수분은 채우고, 피부 결은 매끈하게</h4>
+							<p>
+								<strong>수분을 채우는 스킨의 역할에  충실합니다.</strong><br /><br />
+								부드럽게 스며들어 수분을 공급하는 물스킨 제형으로,<br class="pcBr" />
+								피부가 수분을 머금어 한결 매끈하고 부드러워지고<br class="pcBr" />
+								자극과 끈적임을 줄여 모든 피부타입에 적합합니다.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="prdType blueberryType02">
+					<div class="imgWrap imgCrop imgLeft"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/blueberry_rebalancing_skin_500/img03_1.jpg" alt=""></div>
+					<div class="imgWrap imgRight">
+						<!-- gif -->
+						<div class="prdGifCon">
+							<div class="prdGifPc"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/blueberry_rebalancing_skin_500/img03_2.gif" alt="" /></div>
+							<div class="prdGifMo">
+								<div class="prdGifBtn"><span>gif</span></div>
+								<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/blueberry_rebalancing_skin_500/img03_2.jpg" alt="" />
+							</div>
+						</div>
+						<!-- gif -->
+					</div>
+                    <div class="descWrap">
+                        <h4 class="tit mgt35">닦아내도 두드려도 좋은 데일리 스킨</h4>
+						<p>
+							<strong>스킨은 생각보다 다양하게 활용할 수 있어요.</strong><br /><br />
+							세안 후 닦아내는 스킨으로는 물론,<br class="pcBr" />
+							여러 번 피부에 토닥토닥 흡수시키는 7 스킨법, 화장 솜에 듬뿍 적셔 스킨팩으로도 활용해 보세요.<br /><br />
+							* 매일 아침, 저녁으로 사용하는 스킨은 편리하고 경제적인 대용량 사이즈로 만나보세요.
+						</p>
+                    </div>
+				</div>
+
+				<div class="prdType prdType03 left">
+					<div class="imgWrap imgCrop imgCropLeft"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/common01.jpg" alt=""></div>
+					<div class="descWrap">
+						<div class="vCenter">
+							<h4 class="tit">개봉일 기록</h4>
+							<p>용기에 개봉한 일자를 기록하여 사용기한 내에<br class="pcBr" /> 더 안전하고 건강하게 사용하세요</p>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="subTit"><span class="ng">건강하고 균형 있는 pH 피부로 가꿔 주는</span><em>슈퍼푸드 블루베리<br class="mBr" /> 리밸런싱 라인</em></h3>
+
+				<div class="prdType prdType71">
+                    <div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/common02.jpg" alt=""></div>
+                    <div class="descWrap">
+                        <div class="left">
+                            <h4 class="tit">신이 내린 보랏빛 선물,<br /> 블루베리의 강력한 항산화 파워</h4>
+                            <p>강력한 항산화 효과의 블루베리 성분이<br />탄력 있고 건강한 스킨케어 효과 부여</p>
+                        </div>
+						<div class="center">
+                            <h4 class="tit">약산성 pH로<br /> 건강한 피부 균형 유지</h4>
+                            <p>클렌저부터 기초까지<br class="pcBr" /> 건강한 피부 상태인<br> 약산성으로 조절해 균형 있는 스킨케어</p>
+                        </div>
+                        <div class="right">
+                            <h4 class="tit">기초 단계에서 완성하는<br /> 유수분 밸런싱</h4>
+                            <p>복잡한 단계 없이<br class="pcBr" /> 블루베리 리밸런싱<br class="mBr"> 라인만으로 완성하는<br class="pcBr" /> 유수분 밸런스 조절</p>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="prdType blueberryType03">
+					<div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/common03.jpg" alt=""></div>
+					<div class="descWrap vCenter">
+						<h4 class="tit">SUPER FOOD LINE<br /> 제철 푸드의 항산화와 영양으로<br /> 제철 맞은 피부 에너지</h4>
+						<p>
+							제철을 맞은 원료는 수분 보유력과<br class="mBr""> 항산화 성분, 미네랄이 풍부합니다.<br />
+							자연의 생명력과 에너지를 피부에 전달하기 위해<br> 제철에 수확한 블루베리를 담았습니다.
+						</p>
+					</div>
+				</div>
+
+				<h3 class="subTit"><span class="ng">SUPER FOOD FROM JEJU</span><em>최소의 · 합리적인 · 아름다운<br class="mBr" /> 라이프 스타일<br /> 슈퍼푸드 프롬 제주</em></h3>
+
+				<div class="prdType prdType71">
+                    <div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/common01.jpg" alt=""></div>
+                    <div class="descWrap">
+                        <div class="left">
+                            <h4 class="tit">제철 푸드로<br /> 제철 맞은 피부 에너지</h4>
+                            <p>생명력과 영양을 가득 머금은<br class="pcBr" /> 제철 푸드로<br> 더욱 건강한 스킨케어</p>
+                        </div>
+						<div class="center">
+                            <h4 class="tit">느리지만 더 좋게<br /> 그린 브루잉 추출법</h4>
+                            <p>제철 영양의 손실을 최소화 하기 위해<br>  짜내지 않고 정성과 시간을 들여<br> 여러 번 우려내는 그린 브루잉 추출</p>
+                        </div>
+                        <div class="right">
+                            <h4 class="tit">피부에는 순하게<br /> 효능은 확실하게</h4>
+                            <p>더 신중하고 까다롭게<br class="pcBr" /> 피부에 필요한<br class="mBr"> 성분만을 담아<br class="pcBr" /> 스킨케어의 본질에 집중</p>
+                        </div>
+                    </div>
+                </div>
+
+				<h3 class="subTit"><span class="ng">피부 컨디션에 따라 골라 쓰는</span><em>슈퍼푸드 CHOICE TIP</em></h3>
+
+				<div class="prdType blueberryType04">
+                    <div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/common02.jpg" alt=""></div>
+                    <div class="descWrap vCenter">
+						<h4 class="tit">피부 컨디션과 고민에 맞춘<br /> 4가지 슈퍼푸드 라인</h4>
+						<p>
+							피부는 계절에 따라, 컨디션에 따라, 부분적으로도<br class="pcBr" /> 타입이 달라질 수 있습니다.<br class="pcBr" /><br />
+							다양한 제품들을 화장대에 올려두고 그날의 피부 컨디션에 따라<br class="pcBr" /> 사용하셔도 좋습니다.<br class="pcBr" /><br />
+							브로콜리 → 오트 순서로 높은 보습력을 느낄 수 있습니다.
+						</p>
+						<ul>
+							<li>블랙헤드&피지케어 : 브로콜리
+							<li>레이어링&수분케어 : 아티초크</li>
+							<li>PH 균형&수분케어 : 블루베리</li>
+							<li>고보습&영양케어 : 오트</li>
+						</ul>
+					</div>
+                </div>
+
+				<div class="prdLine">
+					<div class="descWrap">
+						<h4 class="tit">슈퍼푸드 블루베리 라인 사용 순서</h4>
+						<ol>
+							<li>
+								<p class="image"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line01.jpg" alt="" /></p>
+								<p class="txt">클렌징워터 200ml</p>
+							</li>
+							<li>
+								<p class="image"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line02.jpg" alt="" /></p>
+								<p class="txt">5.5 클렌저 100ml</p>
+							</li>
+							<li class="dftW">
+								<p class="image"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line03.jpg" alt="" /></p>
+								<p class="txt">스킨 150ml / 350ml / 500ml</p>
+							</li>
+							<li>
+								<p class="image"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line04.jpg" alt="" /></p>
+								<p class="txt">로션 130ml</p>
+							</li>
+							<li>
+								<p class="image"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line05.jpg" alt="" /></p>
+								<p class="txt">크림 50ml</p>
+							</li>
+							<li class="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/last">
+								<p class="image"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line06.jpg" alt="" /></p>
+								<p class="txt">선크림 40ml</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+				
+				<div class="prdLineM">
+					<h4 class="tit"><strong>슈퍼푸드 블루베리 라인 사용 순서</strong></h4>
+					<ol class="prdSlider customDot">
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line01_m.jpg" alt="" /></div>
+							<p>클렌징워터 200ml</p>
+						</li>
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line02_m.jpg" alt="" /></div>
+							<p>5.5 클렌저 100ml</p>
+						</li>
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line03_m.jpg" alt="" /></div>
+							<p>스킨 150ml / 350ml / 500ml</p>
+						</li>
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line04_m.jpg" alt="" /></div>
+							<p>로션 130ml</p>
+						</li>
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line05_m.jpg" alt="" /></div>
+							<p>크림 50ml</p>
+						</li>
+						<li>
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/superFood/blueberry/line06_m.jpg" alt="" /></div>
+							<p>선크림 40ml</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+            <!-- content E -->

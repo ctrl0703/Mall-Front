@@ -1,0 +1,469 @@
+		<!-- content S -->
+		<style type="text/css">
+			.moVer{display:none !important;}
+
+			.hashtag{margin-top:25px;font-size:0;text-align:center;}
+			.hashtag span{display:inline-block;margin:0 5px;padding:0 15px;background:#a48779;line-height:33px;font-size:18px;color:#fff;}
+			
+			.desc01 ul:after{display:block;content:"";clear:both;}
+			.desc01 li{float:left;width:25%;}
+			.desc01 li:nth-child(-n+4){margin-bottom:60px;}
+			.desc01 li .descWrap{text-align:center;}
+			.desc01 li .descWrap p{font-size:14px;line-height:20px;}
+			.desc01 li .descWrap span{display:inline-block;margin-top:10px;font-size:16px;line-height:22px;color:#222;font-weight:bold;}
+
+			.desc02 li{float:left;width:49%;}
+			.desc02 li .imgWrap{border:1px solid #e9e9e9;}
+			.desc02 li:first-child{margin-right:1.5%;}
+			.desc02 li .descWrap{text-align:center;}
+			.desc02 li .descWrap .tit{margin-top:15px;}	
+
+			.desc03 .box:after{display:block;content:"";clear:both;}
+			.desc03 .box li{float:left;width:32.33%;margin-right:1.5%;}		
+			.desc03 .box li:last-child{margin-right:0;}
+			.desc03 .greyBox{max-width:870px;margin:60px auto 0;padding:45px 45px 60px 45px;background:#f6f6f6;}
+			.desc03 .greyBox .tit{display:inline-block;vertical-align:top;}
+			.desc03 .greyBox ul{display:inline-block;vertical-align:top;margin-left:30px;}
+			.desc03 .greyBox li{font-size:14px;line-height:24px;letter-spacing:-0.025em;}
+
+			.desc04 dl{margin-bottom:50px;}
+			.desc04 dl:last-child{margin-bottom:0;}
+			.desc04 dt{display:inline-block;width:34.2%;margin-right:35px;}
+			.desc04 dt .descWrap{height:66px;}
+			.desc04 dt.title01 .descWrap{background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/title_bg01.jpg')no-repeat center top;}
+			.desc04 dt.title02 .descWrap{background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/title_bg02.jpg')no-repeat center top;}
+			.desc04 dt.title03 .descWrap{background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/title_bg03.jpg')no-repeat center top;}
+			.desc04 dt .descWrap p{margin-top:0;font-size:20px;color:#fff;line-height:66px;}
+			.desc04 dt.title01 .descWrap{padding-left:107px;}
+			.desc04 dt.title02 .descWrap{padding-left:101px;}
+			.desc04 dt.title03 .descWrap{padding-left:85px;}
+			.desc04 dt .descWrap p span{font-family:'notoM';}
+			.desc04 dd{display:inline-block;width:60%;}
+			.desc04 ul:after{display:block;content:"";clear:both;}
+			.desc04 li{float:left;width:23.4%;margin:0 4%;}
+			.desc04 li .descWrap{text-align:center;color:#222;}
+			.desc04 li .descWrap em{font-weight:bold;}
+
+			.prdColorType2_2 .colorShot .itemWrap .imgWrap{margin-right:517px;}
+			.prdColorType2_2 .colorShot .itemWrap .imgWrap img{margin-left:-330px;}
+			.prdColorType2_2 .colorShot .itemWrap .descWrap{width:420px;right:40px;}
+			.prdColorType2_2 .colorShot .itemWrap .icon{position:absolute;top:0;right:40px;}
+
+			@media screen and (max-device-width: 740px){
+				.pcVer{display:none !important;}
+				.moVer{display:block !important;}
+
+				.hashtag span{margin:0 2.5px;padding:0 5px;font-size:15px;line-height:30px;}
+				.hashtag .mt7{margin-top:7px;}
+
+				.desc01{max-width:320px;padding:0 15px;}
+				.desc01 ul{font-size:0;}
+				.desc01 li{float:none;display:inline-block;width:50%;margin-bottom:30px;vertical-align:top;}
+				.desc01 li:nth-child(-n+4){margin-bottom:30px;}
+				.desc01 li img{height:171px;}
+				.desc01 li .descWrap span{margin-top:5px;font-size:15px;}
+
+				.desc02 ul{text-align:center;font-size:0;}
+				.desc02 li{float:none;display:inline-block;width:auto;}
+				.desc02 li:first-child{margin:0 0 30px 0;}
+
+				.descImg01 .imgWrap{padding:0 15px;}
+				.descImg02 .imgWrap{padding:0 15px;}
+
+				.desc03 .box{text-align:center;font-size:0;}
+				.desc03 .box li{float:none;display:inline-block;width:auto;margin:0 0 10px 0;}
+				.desc03 .greyBox{margin:30px auto 0;padding:22px 20px 25px 20px;text-align:center;}
+				.desc03 .greyBox .tit{display:block;margin-top:0;}				
+				.desc03 .greyBox ul{margin:10px 0 0 0;}
+				.desc03 .greyBox li{padding-left:9px;text-indent:-9px;line-height:22px;text-align:left;}
+
+				.desc04 dl{text-align:center;}
+				.desc04 dt{width:auto;margin-right:0;}
+				.desc04 dt .descWrap{height:52px;text-align:center;}
+				.desc04 dt .descWrap p{font-size:16px;line-height:52px;padding-left:20px;}
+				.desc04 dt.title01 .descWrap{padding:0;background-size:100% 100%;}
+				.desc04 dt.title02 .descWrap{padding:0;background-size:100% 100%;}
+				.desc04 dt.title03 .descWrap{padding:0;background-size:100% 100%;}
+				.desc04 dd{width:100%;max-width:402px;margin-top:30px;}				
+				.desc04 dd ul{padding:0 15px;font-size:0;}
+				.desc04 dd li{float:none;display:inline-block;width:28.7%;margin:0 6.9% 0 0;}
+				.desc04 dd li:last-child{margin:0;}
+				.desc04 li .descWrap{padding:0;}	
+
+				.prdColorType2_2 .colorShot .itemWrap .icon{right:15px;}
+				.prdColorType2_2 .colorShot .itemWrap .icon img{height:63px;}
+				.prdColorType2_2 .colorShot .itemWrap .imgWrap{margin:0;}	
+				.prdColorType2_2 .colorShot .itemWrap .imgWrap img{margin:0;}	
+				.prdColorType2_2 .colorShot .itemWrap .descWrap{width:auto;right:0;text-align:center;padding:0;}
+				.prdColorType2_2 .colorShot .itemWrap .descWrap p{font-size:15px;line-height:22px;}	
+				.prdColorType2_2 .colorList .color .imgWrap .chk{background-size:50% auto;}			
+								
+			}
+		</style>
+		<div class="prdDetailConWrap">
+			<h3 class="subTit mgt0">
+				<span class="ng">청정 제주 땅에서 자란<br class="mBr"> 뿌리 채소의 에너지를 오롯이 담은</span>
+				<em>제주 루트 에너지 마스크</em>
+			</h3>
+			<div class="hashtag">
+				<span>#제주 뿌리 채소의 에너지로</span>
+				<br class="mBr">
+				<span class="mt7">#피부속부터 차오르는</span>
+				<span class="mt7">#수분광피부</span>
+				<br class="mBr">
+				<span class="mt7">#속보습마스크</span>
+			</div>
+			
+			<div class="prdType">
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/visual.jpg" alt=""></div>
+			</div>
+			
+			<h3 class="subTit">
+				<span class="ng">깨끗한 제주 토양에서 자란 뿌리 채소 추출물</span>
+				<em>JEJU ROOT VEGETABLE<br class="mBr"> EXTRACT</em>
+			</h3>
+
+			<div class="prdType desc01">
+				<ul>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/list01.jpg" alt=""></div>
+						<div class="descWrap">
+							<p>베타카로틴,<br class="mBr"> 비타민이 풍부한</p>
+							<span>제주 구좌 당근<br> [투명수분]</span>								
+						</div>
+					</li>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/list02.jpg" alt=""></div>
+						<div class="descWrap">
+							<p>베타시아닌이<br class="mBr"> 풍부한</p>
+							<span>제주 한림 비트<br> [생기정화]</span>																
+						</div>
+					</li>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/list03.jpg" alt=""></div>
+						<div class="descWrap">
+							<p>아미노산,<br class="mBr"> 폴리페놀이 풍부한</p>
+							<span>제주 한림 감자<br> [수분진정]</span>																
+						</div>
+					</li>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/list04.jpg" alt=""></div>
+						<div class="descWrap">
+							<p>사포닌,<br class="mBr"> 탄닌이 풍부한</p>
+							<span>제주 한림 우엉<br> [맑은진정]</span>																
+						</div>
+					</li>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/list05.jpg" alt=""></div>
+						<div class="descWrap">
+							<p>비타민,<br class="mBr"> 안토시아닌이 풍부한</p>
+							<span>제주 한림 콜라비<br> [투명탄력]</span>																
+						</div>
+					</li>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/list06.jpg" alt=""></div>
+						<div class="descWrap">
+							<p>탄닌,<br class="mBr"> 뮤신이 풍부한</p>
+							<span>제주 조천 연근<br> [매끈탄력]</span>																
+						</div>
+					</li>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/list07.jpg" alt=""></div>
+						<div class="descWrap">
+							<p>에센셜 오일이<br class="mBr"> 풍부한</p>
+							<span>제주 한림 생강<br> [보습영양]</span>																
+						</div>
+					</li>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/list08.jpg" alt=""></div>
+						<div class="descWrap">
+							<p>아미노산이<br class="mBr"> 풍부한</p>
+							<span>제주 애월 참마<br> [윤기보습]</span>																
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<h3 class="subTit">
+				<em>자연을 닮은 식물 유래<br class="mBr"> 셀룰로오스 시트</em>
+			</h3>
+
+			<div class="prdType desc02">
+				<ul>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img01.jpg" alt=""></div>
+						<div class="descWrap">
+							<div class="tit">비건(Vegan) 인증 시트</div>
+							<p>동물성 원료가 원재료 및 제조 과정에서 일체<br class="mBr"> 포함되거나<br class="pcBr"> 사용되지 않은 비건 인증 시트 적용<br> * 시트에 한함</p>
+						</div>
+					</li>
+					<li>
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img02.jpg" alt=""></div>
+						<div class="descWrap">
+							<div class="tit">자연 유래 셀룰로오스 시트</div>
+							<p>유칼립투스와 대나무에서 유래한<br class="mBr"> 자연 유래 셀룰로오스 시트가<br class="pcBr"> 피부에<br class="mBr"> 투명하고 부드럽게 초밀착</p>								
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<h3 class="subTit">
+				<em>원료 본연의 성분을 <br class="mBr"> 파괴하지 않는<br class="pcBr"> 오일 인퓨전<br class="mBr"> (Oil Infusion) 공법</em>					
+			</h3>
+
+			<div class="prdType descImg01">
+				<div class="imgWrap">
+					<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img03.jpg" alt="" class="pcVer">
+					<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img03_m.jpg" alt="" class="moVer">
+				</div>
+			</div>
+
+			<h3 class="subTit">
+				<em>피부속 수분 에너지를<br class="mBr"> 빈틈없이 채워주는<br> 5중 히알루론산 컴플렉스</em>					
+			</h3>
+
+			<div class="prdType descImg02">
+				<div class="imgWrap">
+					<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img04.jpg" alt="" class="pcVer">
+					<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img04_m.jpg" alt="" class="moVer">
+				</div>
+			</div>
+
+			<h3 class="subTit">
+				<em>넉넉한 에센스 용량</em>					
+			</h3>
+			<div class="prdType desc03">
+				<ul class="box">
+					<li><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img05_1.jpg" alt=""></li>					
+					<li><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img05_2.jpg" alt=""></li>					
+					<li><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img05_3.jpg" alt=""></li>					
+				</ul>
+				<div class="greyBox">
+					<div class="tit">[활용팁]</div>
+					<ul>
+						<li>- 25ml의 에센스가 들어있는 넉넉한 양으로<br class="mBr"> 잔여 에센스는 얼굴에 한번 더 레이어링 하거나<br class="mBr"> 팔, 다리 등 건조한 부위에 발라 주세요.</li>
+						<li>- 조금 더 산뜻한 마무리감을 원한다면,<br class="mBr"> 얼굴에 남은 에센스를 토너로 가볍게 닦아내듯<br class="mBr"> 정돈해 줍니다.</li>
+					</ul>
+				</div>
+			</div>
+
+			<h3 class="subTit">
+				<em>매일 바뀌는 내 피부 컨디션에<br class="mBr"> 따라<br class="pcBr"> 골라 쓰는 맞춤 포뮬러</em>										
+			</h3>
+
+			<div class="prdType desc04">
+				<dl>
+					<dt class="title01">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_1_1.gif" alt=""></div>
+						<div class="descWrap">
+							<p>산뜻 촉촉한 <span>‘워터 에센스 타입’</span></p>
+						</div>
+					</dt>
+					<dd>
+						<ul>
+							<li>
+								<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_1_2.jpg" alt=""></div>
+								<div class="descWrap">
+									<p><em>당근</em><br> [투명수분]</p>
+								</div>
+							</li>
+							<li>
+								<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_1_3.jpg" alt=""></div>
+								<div class="descWrap">
+									<p><em>비트</em><br> [생기정화]</p>
+								</div>
+							</li>
+							<li>
+								<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_1_4.jpg" alt=""></div>
+								<div class="descWrap">
+									<p><em>감자</em><br> [수분진정]</p>
+								</div>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="title02">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_2_1.gif" alt=""></div>
+						<div class="descWrap">
+							<p>쫀쫀한 수분광 피부 <span>‘앰플 타입’</span></p>
+						</div>
+					</dt>
+					<dd>
+						<ul>
+							<li>
+								<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_2_2.jpg" alt=""></div>
+								<div class="descWrap">
+									<p><em>우엉</em><br> [맑은진정]</p>
+								</div>
+							</li>
+							<li>
+								<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_2_3.jpg" alt=""></div>
+								<div class="descWrap">
+									<p><em>콜라비</em><br> [투명탄력]</p>
+								</div>
+							</li>
+							<li>
+								<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_2_4.jpg" alt=""></div>
+								<div class="descWrap">
+									<p><em>연근</em><br> [매끈탄력]</p>
+								</div>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="title03">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_3_1.gif" alt=""></div>
+						<div class="descWrap">
+							<p>밀도있게 채워지는 영양감 <span>‘크림 타입’</span></p>
+						</div>
+					</dt>
+					<dd>
+						<ul>
+							<li>
+								<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_3_2.jpg" alt=""></div>
+								<div class="descWrap">
+									<p><em>생강</em><br> [보습영양]</p>
+								</div>
+							</li>
+							<li>
+								<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img06_3_3.jpg" alt=""></div>
+								<div class="descWrap">
+									<p><em>참마</em><br> [윤기보습]</p>
+								</div>
+							</li>			
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+			<h3 class="subTit">
+				<em>한 눈에 알아보는<br class="mBr"> 제주 루트 에너지 마스크</em>										
+			</h3>
+
+			<div class="prdColorType2_2">
+				<div class="colorList">
+					<div class="color">
+						<div class="imgWrap">
+							<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_1_1.jpg" alt="">
+							<span class="chk"></span>
+						</div>
+						<p>당근</p>						
+					</div>
+					<div class="color">
+						<div class="imgWrap">
+							<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_1_2.jpg" alt="">
+						</div>
+						<p>비트</p>								
+					</div>					
+					<div class="color">
+						<div class="imgWrap">
+							<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_1_3.jpg" alt="">
+						</div>
+						<p>감자</p>								
+					</div>					
+					<div class="color">
+						<div class="imgWrap">
+							<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_1_4.jpg" alt="">
+						</div>
+						<p>우엉</p>								
+					</div>					
+					<div class="color">
+						<div class="imgWrap">
+							<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_1_5.jpg" alt="">
+						</div>
+						<p>콜라비</p>								
+					</div>					
+					<div class="color">
+						<div class="imgWrap">
+							<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_1_6.jpg" alt="">
+						</div>
+						<p>연근</p>								
+					</div>					
+					<div class="color">
+						<div class="imgWrap">
+							<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_1_7.jpg" alt="">
+						</div>
+						<p>생강</p>								
+					</div>					
+					<div class="color">
+						<div class="imgWrap">
+							<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_1_8.jpg" alt="">
+						</div>
+						<p>참마</p>								
+					</div>					
+				</div>
+				<div class="colorShot">
+					<div class="itemWrap">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_2_1.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<strong>당근 [투명수분]</strong>
+							<p>청정 제주 땅에서 자란 당근 추출물과<br class="mBr"> 5중 히알루론산 콤플렉스가<br class="pcBr"> 함유되어<br class="mBr"> 건조한 피부를 촉촉하고 맑게 케어해 주는<br> 투명 수분 마스크</p>														
+						</div>						
+						<div class="icon"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/type01.png" alt=""></div>
+					</div>
+					<div class="itemWrap">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_2_2.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<strong>비트 [생기정화]</strong>
+							<p>청정 제주 땅에서 자란 비트 추출물과<br class="mBr"> 5중 히알루론산 콤플렉스가<br class="pcBr"> 함유되어<br class="mBr"> 칙칙해진 피부를 깨끗하고 생기 있게 케어해 주는<br> 생기 정화 마스크</p>									
+						</div>
+						<div class="icon"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/type01.png" alt=""></div>
+					</div>					
+					<div class="itemWrap">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_2_3.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<strong>감자 [수분진정]</strong>
+							<p>청정 제주 땅에서 자란 감자 추출물과<br class="mBr"> 5중 히알루론산 콤플렉스가<br class="pcBr"> 함유되어<br class="mBr"> 자극 받고 건조해진 피부를 촉촉하게 진정시켜 주는<br> 수분 진정 마스크</p>									
+						</div>
+						<div class="icon"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/type01.png" alt=""></div>
+					</div>					
+					<div class="itemWrap">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_2_4.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<strong>우엉 [맑은진정]</strong>
+							<p>청정 제주 땅에서 자란 우엉 추출물과<br class="mBr"> 5중 히알루론산 콤플렉스가<br class="pcBr"> 함유되어<br class="mBr"> 자극 받고 칙칙해진 피부를 맑게 진정시켜 주는<br> 맑은 진정 마스크</p>																	
+						</div>
+						<div class="icon"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/type02.png" alt=""></div>
+					</div>					
+					<div class="itemWrap">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_2_5.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<strong>콜라비 [투명탄력]</strong>
+							<p>청정 제주 땅에서 자란 콜라비 추출물과<br class="mBr"> 5중 히알루론산 콤플렉스가<br class="pcBr"> 함유되어 칙칙하고<br class="mBr"> 힘 없는 피부를 환하고 힘 있는 피부로 케어해<br class="pcBr"> 주는<br class="mBr"> 투명 탄력 마스크</p>									
+						</div>
+						<div class="icon"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/type02.png" alt=""></div>
+					</div>					
+					<div class="itemWrap">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_2_6.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<strong>연근 [매끈탄력]</strong>
+							<p>청정 제주 땅에서 자란 연근 추출물과<br class="mBr"> 5중 히알루론산 콤플렉스가<br class="pcBr"> 함유되어<br class="mBr"> 거칠어지고 힘 없는 피부를 매끈하고 힘 있는 피부로<br> 케어해 주는 매끈 탄력 마스크</p>									
+						</div>
+						<div class="icon"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/type02.png" alt=""></div>
+					</div>					
+					<div class="itemWrap">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_2_7.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<strong>생강 [보습영양]</strong>
+							<p>청정 제주 땅에서 자란 생강 추출물과<br class="mBr"> 5중 히알루론산 콤플렉스가<br class="pcBr"> 함유되어 푸석하고<br class="mBr"> 건조한 피부에 진한 영양감을 부여해 주는<br> 보습 영양 마스크</p>									
+						</div>
+						<div class="icon"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/type03.png" alt=""></div>
+					</div>					
+					<div class="itemWrap">
+						<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/img07_2_8.jpg" alt=""></div>
+						<div class="descWrap vCenter">
+							<strong>참마 [윤기보습]</strong>
+							<p>청정 제주 땅에서 자란 참마 추출물과<br class="mBr"> 5중 히알루론산 콤플렉스가<br class="pcBr"> 함유되어 메마르고<br class="mBr"> 건조해진 피부에 촉촉한 수분 광을 선사해 주는<br> 윤기 보습 마스크</p>									
+						</div>
+						<div class="icon"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/mask/jeju_root_energy_mask/type03.png" alt=""></div>
+					</div>					
+				</div>			
+			</div>
+
+		</div>
+		<script>				
+			
+		</script>
+		<!-- content E -->	

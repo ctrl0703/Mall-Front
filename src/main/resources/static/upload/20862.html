@@ -1,0 +1,547 @@
+<!-- content S -->
+<div class="prdDetailConWrap">
+	<style type="text/css">
+		.pcVer {}
+		.moVer {display:none !important;}
+		
+		.hashType{margin-top:57px;text-align:center;font-size:0;}
+		.hashType li{display:inline-block;*zoom:1;*display:inline;padding:0 10px;margin-left:10px;font-size:18px;font-family:'ngB';line-height:33px;color:#fff;background:#f4b0ab;}
+		.hashType li:first-child{margin:0;}
+		
+		.toneUp01 .descWrap .vCenter{height: 100%;}
+		.toneUp01 .descWrap .tit{margin-top:40px;}
+		.toneUp01 .descWrap .tit:first-child{margin-top:0;}
+		.toneUp01 .descWrap p{padding-bottom:40px;}
+		.toneUp01 .descWrap span{position: absolute;right: 0;bottom: 0;display: inline-block;padding:7px 13px;background-color: #f9f9f9;}
+		
+		.toneUp02{padding: 0 8%;}
+		.toneUp02 .imgCrop{width:40%;float: left;}
+		.toneUp02 .imgCrop .box{height: 270px;position: relative;}
+		.toneUp02 .imgCrop .box03{margin-top:20px;}
+		.toneUp02 .imgCrop .box img{width:407px;margin-left:-203px;}
+		.toneUp02 .descWrap{width:50%;height: 560px;float:right;background: url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img02_3.jpg') no-repeat right 30px;}
+		
+		.toneUp03 .box{width: 50%;float:left;text-align: center;}
+		.toneUp03 .box > .descWrap{min-height: 100px;padding-bottom: 20px;}
+		.toneUp03 .box02 > .descWrap p em{color: #ff5d5d;}
+		.toneUp03 .box03{width: 100%;float: none;clear: both;padding-top: 70px;font-size: 0;}
+		.toneUp03 .box03 .inBox{display: inline-block;margin: 0 15px;}
+		.toneUp03 .box03 .inBox p{font-size: 18px;font-family: 'ngB';line-height: 26px;color: #222;}
+		.toneUp03 .txtBox{max-width:270px;margin: 60px auto 0;padding: 20px 25px;background-color: #f6f6f6;text-align: left;}
+		
+		.toneUp04 .imgWrap{overflow: hidden;}
+		.toneUp04 .box{width:32%;float: left;margin-right: 2%;}
+		.toneUp04 .box03{margin-right: 0;}
+		.toneUp04 .descWrap{max-width:770px;margin: 60px auto 0;padding:40px 60px;background-color: #f6f6f6;}
+		.toneUp04 .descWrap .tit{width:20%;float: left;}
+		.toneUp04 .descWrap ul{margin-left: 20%;position: relative;}
+		.toneUp04 .descWrap li{margin-top: 20px;line-height: 24px;}
+		.toneUp04 .descWrap li:first-child{margin-top:0;}
+		.toneUp04 .descWrap li:before{content: '-';width: 8px;position: absolute;left: -8px;}
+		
+		.toneUp05 {font-size: 0;text-align: center;}
+		.toneUp05 .box{display: inline-block;vertical-align: top;}
+		.toneUp05 .box01{margin-right: 55px;}
+		.toneUp05 .box03{margin-left: 20px;}
+		.toneUp05 .box .descWrap .tit{margin: 25px 0 15px;font-size: 20px;}
+		.toneUp05 .box .descWrap li{font-size: 14px;line-height: 24px;}
+		.toneUp05 .box  li:before{content: 'ㆍ';font-size: 24px;margin-right: -4px;}
+		
+		.creamCommon01 .box01{overflow: hidden;}
+		.creamCommon01 .box01 .left_img{width:39.5%;float: left;}
+		.creamCommon01 .box01 .right_img{width:59%;float: right;}
+		.creamCommon01 .box02{margin-top: 6.8%;}
+		.creamCommon01 .descWrap{max-width:780px;margin: 60px auto 0;padding:40px 60px;background-color: #f6f6f6;}
+		.creamCommon01 .descWrap .tit{width:18%;float: left;}
+		.creamCommon01 .descWrap ul{margin-left: 18%;position: relative;}
+		.creamCommon01 .descWrap li{line-height: 24px;}
+		.creamCommon01 .descWrap li:before{content: '-';width: 8px;position: absolute;left: -8px;}
+		
+		.commonType02{padding:0 70px;}
+		.commonType02 .descWrap{text-align:center;font-size:0;letter-spacing:-4px;line-height:0;}
+		.commonType02 .descWrap > div{display:inline-block;position:relative;width:50%;margin-top:50px;vertical-align:top;}
+		.commonType02 .descWrap .right::after{position:absolute;top:0;left:0;width:1px;height:100%;background:#d3d3d3;content:'';}
+		.commonType02 .descWrap > div p{font-size:14px;letter-spacing:-0.5px;line-height:24px;}
+		.pdtSlide .swiper-btn{display:none;}
+		.pdtSlide .swiper-navigation button{position:absolute;top:50%;width:70px;height:70px;margin-top:-35px;font-size:0;color:transparent;text-indent:-99999em;background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/arrow.png') no-repeat;}
+		.pdtSlide .swiper-navigation button.prev-btn{left:0;background-position:left center;}
+		.pdtSlide .swiper-navigation button.next-btn{right:0;background-position:right center;}
+
+		.videoType video {width:100%;}
+		.vodType video {width:100%;}
+		
+		@media screen and (max-device-width: 1200px){
+			.pcVer {display:none !important;}
+			.moVer {display:block !important;}
+
+			.sly{max-width: 640px;margin-left: auto;margin-right: auto;}
+			.sly .slick-dots{font-size: 0;text-align: center;}
+			.sly .slick-dots li{width: 11px;height: 11px;display: inline-block;margin: 16px 7px 0;background-color: #e4e4e4;text-indent: -9999px;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;-ms-border-radius: 6px;}
+			.sly .slick-dots li.slick-active{background-color: #565656;}
+
+			.toneUp02{padding: 0;}
+			.toneUp02 .imgCrop{width:auto;float: none;}
+			.toneUp02 .imgCrop .box{height:auto;}
+			.toneUp02 .imgCrop .box03{margin-top:0;}
+			.toneUp02 .imgCrop .box img{width:100%;margin-left:0;position: static;}
+			.toneUp02 .descWrap{width:auto;height: auto;float:none;background:none;text-align: center;}
+			.toneUp02 .descWrap .vCenter{position: static;margin-top: 0 !important;}
+			.toneUp02 .descWrap .tit{margin-top: 25px;}
+
+			.toneUp03 ol{position: relative;margin:0 auto;border: 1px solid #e5e5e5;}
+			.toneUp03 .box{width: auto;padding-bottom: 35px;}
+			.toneUp03 .box01{margin-top:70px;}
+			.toneUp03 .box > .descWrap{min-height:auto;margin: 40px 0;text-align: center;}
+			.toneUp03 .box02{margin-top: 10px;}
+			.toneUp03 .box03{float: left;clear: none;padding-top: 0;}
+			.toneUp03 .box03 .inBox{width: 45%;display: inline-block;margin: 0;}
+			.toneUp03 .box03 .inBox03, .toneUp03 .box03 .inBox04{margin-top: 15px;}
+			.toneUp03 .box03 .inBox img{width: auto;margin: 0 auto 10px;}
+			.toneUp03 .slick-dots{position: absolute;bottom: -30px;left: 50%;margin-left: -37px;}
+			.toneUp03 .txtBox{max-width:300px;}
+
+			.toneUp04 .box{width:auto;margin-right: 0;}
+			.toneUp04 .descWrap{max-width:auto;margin-top: 50px;padding:0 15px;background-color: transparent;}
+			.toneUp04 .descWrap .tit{width:auto;float: none;text-align: center;}
+			.toneUp04 .descWrap ul{margin: 10px 0 0 0;}
+			.toneUp04 .descWrap li{line-height: 22px;}
+
+			.toneUp05{margin-bottom: 90px;}
+			.toneUp05 > ul{position: relative;margin:0 auto;padding: 20px 0;border: 1px solid #e5e5e5;}
+			.toneUp05 .box{display: block;margin: 0;}
+			.toneUp05 .box01{margin-top:20px;}
+			.toneUp05 .box03{margin-top:30px;}
+			.toneUp05 .box img{width: auto;margin: 0 auto;}
+			.toneUp05 .box .descWrap{text-align: center;}
+			.toneUp05 .box .descWrap .tit{margin: 15px 0 10px;}
+			.toneUp05 .box  li:before{content: 'ㆍ';margin-right: -4px;}
+			.toneUp05 .slick-dots{position: absolute;bottom: -30px;left: 50%;margin-left: -37px;}
+			
+			.creamCommon01 .pcVer{display: block !important;}
+			.creamCommon01 .moVer{display: none !important;}
+		}
+		
+		@media screen and (max-device-width: 740px){
+			.pcVer {display:none !important;}
+			.moVer {display:block !important;}
+			
+			/*.commonType00{height:500px;background:#f5dce5 url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/common_top_m.jpg') no-repeat center top / auto 500px;}
+			.commonType00 img{display:none;}*/
+
+			.hashType{margin:37px auto 0 auto;}
+			.hashType li{margin:5px 4px 0 4px;padding: 0 7px;font-size:14px;line-height:28px;}
+			.hashType li:first-child{margin:5px 4px 0 4px;}
+			
+			.toneUp01 .descWrap{text-align: center;}
+			.toneUp01 .descWrap .tit{margin-top:30px;}
+			.toneUp01 .descWrap .tit:first-child{margin-top:30px;}
+			.toneUp01 .descWrap p{padding-bottom:30px;}
+			.toneUp01 .descWrap span{position:static;}
+
+			.toneUp03 ol{max-width: 275px;}
+			.toneUp03 .box > .descWrap{margin: 20px 0;}
+			.toneUp03 .box > .descWrap .tit{font-size: 14px;}
+			.toneUp03 .box > .descWrap p{font-size: 11px;}
+			.toneUp03 .box{padding-bottom: 25px;}
+			.toneUp03 .box02{margin-top: 0;}
+			.toneUp03 .box03{margin-top: 0;}
+			.toneUp03 .box03 .inBox{width: 45%;}
+			.toneUp03 .box03 .inBox img{width: 70%;}
+			.toneUp03 .box03 .inBox p{font-size: 10px;line-height: 14px;text-align: center;}
+			.toneUp03 .slick-dots{position: absolute;bottom: -30px;left: 50%;margin-left: -37px;}
+			.toneUp03 .txtBox{max-width:295px;margin: 60px auto 0;box-sizing: border-box;font-size: 13px;letter-spacing: -0.5px;}
+
+			.toneUp05 > ul{max-width: 275px;}
+			.toneUp05 .box img{width: 70%;}
+			.toneUp05 .box .descWrap .tit{margin: 15px 0 10px;font-size: 18px;}
+			.toneUp05 .box .descWrap li{font-size: 15px;line-height: 22px;}
+			.toneUp05 .box  li:before{content: 'ㆍ';font-size: 20px;margin-right: -4px;}
+			.toneUp05 .slick-dots{position: absolute;bottom: -30px;left: 50%;margin-left: -37px;}
+			
+			.creamCommon01 .pcVer{display: none !important;}
+			.creamCommon01 .moVer{display: block !important;}
+			.creamCommon01 .box02{margin-top: 0;}
+			.creamCommon01 .descWrap{max-width:auto;margin-top: 35px;padding:0 15px;background-color: transparent;}
+			.creamCommon01 .descWrap .tit{width:auto;float: none;text-align: center;}
+			.creamCommon01 .descWrap ul{margin: 0;}
+			.creamCommon01 .descWrap li{margin-top:20px;line-height: 22px;}
+			.creamCommon01 .descWrap li:first-child{margin-top:10px;}
+
+			.commonType02{padding:0;}
+			.commonType02 .descWrap > div{display:block;width:auto;margin-top:25px;}
+			.commonType02 .descWrap .right{padding-top:25px;}
+			.commonType02 .descWrap .right::after{width:100%;height:1px;}
+			.commonType02 .descWrap > div .tit{margin-top:0;}
+			.commonType02 .descWrap > div p{font-size:15px;line-height:22px;}
+			.prdType img,
+			.prdLine img {max-width:100%;}
+			.pdtSlide{text-align:center;}
+			.pdtSlide .swiper-wrapper .swiper-slide{margin-bottom:15px;}
+			.pdtSlide .swiper-wrapper .swiper-slide img{width:100%;}
+			.pdtSlide .swiper-pagination{display:inline-block;vertical-align:middle;line-height:0;}
+			.pdtSlide .swiper-pagination .swiper-pagination-bullet{display:inline-block;width:11px;height:11px;margin:0 4px;vertical-align:middle;background:#dbdbdb;
+			-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;}
+			.pdtSlide .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{background:#565656;}
+			.pdtSlide .swiper-btn{display:inline-block;position:relative;vertical-align:middle;line-height:0;width:11px;height:11px;font-size:0;color:transparent;text-indent:-99999em;}
+			.pdtSlide .swiper-btn::before, .pdtSlide .swiper-btn::after{position:absolute;top:0;bottom:0;border:0 solid transparent;border-right:0;border-left:4px solid #565656;content:'';}
+			.pdtSlide .swiper-btn::before{right:0;}
+			.pdtSlide .swiper-btn::after{left:0;}
+			.pdtSlide .swiper-btn.stop::before{border:0;}
+			.pdtSlide .swiper-btn.stop::after{border-width:5px;border-left:10px solid #565656;}
+			.pdtSlide .swiper-navigation button{width:25px;height:50px;margin-top:-25px;background-size:70px auto;}
+		}
+	</style>
+	
+	<!--<div class="commonType00">
+		<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/common_top.jpg" alt="" /></div>
+		<p class="hide">
+			2월 25일(월) 10시 OPEN 선착순 5,000개<br />
+			필터 없이도 #벚꽃톤 피부<br />
+			벚꽃톤업 프리런칭 이벤트<br />
+			출시 전 왕벚꽃 톤업 크림을 구매해주신 선착순 5,000분께 일회용 필름 카메라 벚꽃톤 카메라를 드립니다!<br />
+			마이샵 고객 단독 추가 혜택<br />
+			선구매 고객 중 마이샵 등록 고객 대상, 3월 한 달 간 마이샵에서 사용 가능한 20% 할인 쿠폰 추가 증정!<br />
+			*2월 25일(월) 마이샵 신규 등록 고객까지 포함<br />
+			*쿠폰: 2/28(목) 문자로 일괄 지급 (문자수신거부 해제 필수)
+		</p>
+	</div>-->
+	
+	<h3 class="subTit mgt0"><span class="ng">건조함 없이 피부에 밀착되어<br class="mBr" /> 자연스럽게 민낯을<br class="pcBr" /> 밝혀주는 수분 생기 톤업 크림</span><em>제주 왕벚꽃 톤업 크림</em></h3>
+	
+	<ul class="hashType">
+		<li>#왕벚꽃</li>
+		<li>#벚꽃톤</li>
+		<li>#수분생기</li>
+		<li>#감쪽민낯</li>
+	</ul>
+	
+	<div class="prdType prdType72 toneUp01">
+		<div class="imgWrap imgCrop"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img01.jpg" alt="" /></div>
+		<div class="descWrap">
+			<div class="vCenter">
+				<h4 class="tit">제주 왕벚잎의 브라이트닝 효과로<br /> 맑고 화사하게</h4>
+				<p class="line">제주 왕벚나무 잎 추출물이 함유되어 있어<br /> 맑고 화사한 생기가 도는 피부로 가꿔줍니다.</p>
+				<h4 class="tit">자연 유래 베타인의 수분 케어로<br /> 건조함 없이 촉촉하게</h4>
+				<p class="line">Sugar beet(사탕무)에서 추출한 보습 성분인<br /> 내추럴 베타인이 피부 위 수분이<br class="mBr" /> 날아가지 않도록<br class="pcBr" /> 잡아주어 건조함 없이<br class="mBr" /> 촉촉한 피부로 케어해줍니다.</p>
+				<h4 class="tit">진짜 내 민낯인 것 처럼 감쪽 톤업</h4>
+				<p class="line">두껍고 답답하게 덮은 인위적인 백탁이 아니라,<br /> 피부에 부담 없는 가볍고 자연스러운<br class="mBr" /> 톤업 효과를 전달하여<br class="pcBr" /> 본연의 민낯이<br class="mBr" /> 맑고 화사해 보이도록 도와줍니다.</p>
+				<h4 class="tit">프루티 플로랄 계열의 자연유래 향</h4>
+				<p>제주의 봄을 아름답게 만드는<br class="mBr" /> 왕벚꽃의 화사함을<br class="pcBr" /> 프루티 플로랄 계열의<br class="mBr" /> 자연유래 향으로 표현했습니다.<br /> (* 인공향 무첨가)</p>
+				<span>* 미백 기능성 화장품 2019000124</span>
+			</div>
+		</div>
+	</div>
+	
+	<div class="prdType toneUp02">
+		<ul class="imgWrap imgCrop sly">
+			<li class="box box01 moVer">
+				<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img02_3_m.jpg" alt="" />
+			</li>
+			<li class="box box02">
+				<!-- gif -->
+				<div class="prdGifCon">
+					<div class="prdGifPc"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img02_1.gif" alt="" /></div>
+					<div class="prdGifMo">
+						<a href="javascript:void(0);" class="prdGifBtn"><span>gif</span></a>
+						<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img02_1.jpg" alt="" />
+					</div>
+				</div>
+				<!-- //gif -->
+			</li>
+			<li class="box box03">
+				<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img02_2.jpg" alt="" />
+			</li>
+		</ul>
+		<div class="descWrap">
+			<div class="vCenter">
+				<h4 class="tit">건조함, 들뜸 없는 수분 톤업 크림</h4>
+				<p>수분감 넘치는 워터리한 텍스처가<br class="pcBr" /> 건조함 없이<br class="mBr" /> 피부에 밀착되어<br class="pcBr" /> 칙칙한 민낯을 자연스럽게<br /> 밝혀주는 촉촉한 톤업 크림입니다.</p>
+			</div>
+		</div>
+	</div>
+	
+	<h3 class="subTit"><em>[제주 왕벚꽃 톤업 크림의<br class="mBr" /> 인체 적용 시험 결과]</em></h3>
+	
+	<div class="prdType toneUp03">
+		<ol class="pcVer">
+			<li class="box box01">
+				<div class="descWrap">
+					<h4 class="tit">1. 수분량 : 사용 직후 133% 증가</h4>
+				</div>
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_1.jpg" alt=""></div>
+			</li>
+			<li class="box box02">
+				<div class="descWrap">
+					<h4 class="tit">2. 피부 균일도 :<br class="mBr" /> 2주 후 5.6%, 4주 후 8.8% 개선</h4>
+					<p>*4주 사용으로 피부톤을 개선하여 피부톤을<br class="mBr" /> 균일하게 가꿔주는 제품입니다.<br /><em>(결과값이 작아질 수록 피부 균일도가 개선됨을 의미)</em></p>
+				</div>
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_2.jpg" alt=""></div>
+			</li>
+			<li class="box box03">
+				<div class="descWrap">
+					<h4 class="tit">3. 고객 만족도 설문 조사 결과</h4>
+				</div>
+				<div class="imgWrap">
+					<ul>
+						<li class="inBox inBox01">
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_3_1.png" alt=""></div>
+							<div class="descWrap"><p>제품 사용 후<br /> 즉각적인<br /> 톤업 효과를 느낀다.</p></div>
+						</li>
+						<li class="inBox inBox02">
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_3_2.png" alt=""></div>
+							<div class="descWrap"><p>제품 사용 후<br /> 민낯이 자연스럽게<br /> 밝아진 느낌이 든다.</p></div>
+						</li>
+						<li class="inBox inBox03">
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_3_3.png" alt=""></div>
+							<div class="descWrap"><p>제품 사용 후<br /> 피부에 생기가<br /> 도는 느낌이다.</p></div>
+						</li>
+						<li class="inBox inBox04">
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_3_4.png" alt=""></div>
+							<div class="descWrap"><p>제품 사용 후<br /> 피부가 촉촉하고,<br /> 밝아진 느낌이 든다.</p></div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ol>
+		<ol class="sly moVer">
+			<li class="box box03">
+				<div class="descWrap">
+					<h4 class="tit">1. 고객 만족도 설문 조사 결과</h4>
+				</div>
+				<div class="imgWrap">
+					<ul>
+						<li class="inBox inBox01">
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_3_1.png" alt=""></div>
+							<div class="descWrap"><p>제품 사용 후<br /> 즉각적인<br /> 톤업 효과를 느낀다.</p></div>
+						</li>
+						<li class="inBox inBox02">
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_3_2.png" alt=""></div>
+							<div class="descWrap"><p>제품 사용 후<br /> 민낯이 자연스럽게<br /> 밝아진 느낌이 든다.</p></div>
+						</li>
+						<li class="inBox inBox03">
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_3_3.png" alt=""></div>
+							<div class="descWrap"><p>제품 사용 후<br /> 피부에 생기가<br /> 도는 느낌이다.</p></div>
+						</li>
+						<li class="inBox inBox04">
+							<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_3_4.png" alt=""></div>
+							<div class="descWrap"><p>제품 사용 후<br /> 피부가 촉촉하고,<br /> 밝아진 느낌이 든다.</p></div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="box box01">
+				<div class="descWrap">
+					<h4 class="tit">2. 수분량 : 사용 직후 133% 증가</h4>
+				</div>
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_1.jpg" alt=""></div>
+			</li>
+			<li class="box box02">
+				<div class="descWrap">
+					<h4 class="tit">3. 피부 균일도 :<br class="mBr" /> 2주 후 5.6%, 4주 후 8.8% 개선</h4>
+					<p>*4주 사용으로 피부톤을 개선하여 피부톤을<br class="mBr" /> 균일하게 가꿔주는 제품입니다.<br /><em>(결과값이 작아질 수록 피부 균일도가 개선됨을 의미)</em></p>
+				</div>
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img03_2.jpg" alt=""></div>
+			</li>
+		</ol>
+		<p class="txtBox">
+			1) 시험 기관: 피엔케이피부임상연구센타(주)<br />
+			2) 시험 기간: 2018.12.06~2019.01.07<br />
+			3) 시험 대상: 만 20~30대 여성 30명
+		</p>
+	</div>
+	
+	<div class="prdType toneUp04">
+		<ul class="imgWrap sly">
+			<li class="box box01"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img04_1.jpg" alt=""></li>
+			<li class="box box02"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img04_2.jpg" alt=""></li>
+			<li class="box box03"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img04_3.jpg" alt=""></li>
+		</ul>
+		<div class="descWrap">
+			<h4 class="tit">[사용법]</h4>
+			<ul>
+				<li>스킨케어 마지막 단계에서 적당량을 덜어 얼굴과 목에 부드럽게 펴 발라 흡수시켜 줍니다.<br class="pcBr" /> 톤업 효과가 더 필요한 부위엔 한 번 더 얇게 펴 발라주면 화사한 피부로 마무리됩니다.</li>
+				<li>자외선 차단 기능이 없는 제품이기 때문에 톤업 크림을 발라준 후 선크림을 사용합니다.</li>
+				<li>즉각적인 톤업 효과를 주는 파우더가 함유된 제품으로 사용 후 가벼운 세안이 필요합니다.<br class="pcBr" /> 잠들기 전엔 톤업 크림 대신 촉촉한 왕벚꽃 젤리 크림을 추천합니다.</li>
+			</ul>
+		</div>
+	</div>
+	
+	<h3 class="subTit"><span class="ng">이럴 때 사용하세요!</span><em>톤업 크림이 필요한 순간</em></h3>
+	
+	<div class="prdType toneUp05">
+		<ul class="sly">
+			<li class="box box01">
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img05_1.png" alt=""></div>
+				<div class="descWrap">
+					<h4 class="tit">빠르고, 간편한 피부 표현</h4>
+					<ul>
+						<li>집 근처 약속, 편의점 갈 때</li>
+						<li>메이크업 하기 너무 귀찮을 때</li>
+						<li>엠티나, 오티, 여행 중</li>
+						<li>시험 기간, 바쁜 출근길</li>
+					</ul>
+				</div>
+			</li>
+			<li class="box box02">
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img05_2.png" alt=""></div>
+				<div class="descWrap">
+					<h4 class="tit">파운데이션 프리 기간용 아이템</h4>
+					<ul>
+						<li>피부가 예민한 기간이라<br class="mBr" /> 메이크업이 부담스러울 때</li>
+						<li>스킨케어 만으로 피부를<br class="mBr" /> 편안하게 케어하고 싶을 때</li>
+						<li>과도한 땀, 피지로 베이스가<br class="mBr" /> 쉽게 뭉치고 무너지기 쉬운 한여름</li>
+					</ul>
+				</div>
+			</li>
+			<li class="box box03">
+				<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cherry_blossom_toneUp_cream/img05_3.png" alt=""></div>
+				<div class="descWrap">
+					<h4 class="tit">피부톤 케어</h4>
+					<ul>
+						<li>평소 건조하고 칙칙한 피부톤이 고민일 때</li>
+						<li>얼굴과 목의 피부 톤이 다를 때</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	
+	<div class="prdType vodType">
+		<video id="vod1" controls="" playsinline="" poster="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/common_toneupcream.jpg">
+			<source src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/common_toneupcream.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	
+	<h3 class="subTit"><span class="ng">왕벚꽃 톤업 크림 '짝꿍템'</span><em>왕벚꽃 톤업 크림 200% 활용법</em></h3>	
+	<div class="prdType creamCommon01">
+		<ul class="imgWrap pcVer">
+			<li class="box box01"><img class="left_img" src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cream_common01_1.jpg" alt=""><img class="right_img" src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cream_common01_2.gif" alt=""></li>
+			<li class="box box02"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cream_common01_3.jpg" alt=""></li>
+		</ul>
+		<ul class="imgWrap moVer sly">
+			<li class="box box01"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cream_common01_1_m.jpg" alt=""></li>
+			<li class="box box02"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cream_common01_2_m.jpg" alt=""></li>
+			<li class="box box03">
+				<!-- gif -->
+				<div class="prdGifCon">
+					<div class="prdGifPc"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cream_common01_3_m.gif" alt="" /></div>
+					<div class="prdGifMo">
+						<a href="javascript:void(0);" class="prdGifBtn"><span>gif</span></a>
+						<img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cream_common01_3_m.jpg" alt="" />
+					</div>
+				</div>
+				<!-- //gif -->
+				</li>
+			<li class="box box04"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/cream_common01_4_m.jpg" alt=""></li>
+		</ul>
+		<div class="descWrap">
+			<h4 class="tit">[활용법]</h4>
+			<ul>
+				<li>제주 왕벚꽃 톤업 크림에 젤리 크림을 섞어서 사용하면 한 층 더 촉촉하고 맑은 피부톤을 완성할 수 있습니다.</li>
+				<li>젤리 크림의 비율은 피부 타입, 오늘의 피부 컨디션에 따라 조절하여 사용하면 좋습니다.</li>
+				<li>파운데이션이나 쿠션 전에 발라주면 가볍게 톤 보정이 가능한 수분 베이스로도 활용 가능합니다.</li>
+			</ul>
+		</div>
+	</div>
+	
+	<h3 class="subTit"><span class="ng">맑고 화사한 브라이트닝 효과를 주는</span><em>제주 왕벚잎 추출 과정</em></h3>
+	
+	<div class="prdType commonType01">
+		<div class="imgWrap"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/common01.jpg" alt=""></div>
+	</div>
+	
+	<h3 class="subTit"><span class="ng">수분 생기 피부를 위한</span><em>제주 왕벚꽃 라인</em></h3>
+		
+	<div class="prdType commonType02">
+		<div class="swiper-container pdtSlide cbSlide">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/common02_1.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/common02_2.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/common02_3.jpg" alt=""></div>
+			</div>
+			<div class="swiper-pagination slidePage"></div>
+			<div class="swiper-btn">
+				<a href="javascript:void(0);" class="slidePauseBtn on">제어</a>
+			</div>
+			<div class="swiper-navigation">
+				<button class="prev-btn">이전</button>
+				<button class="next-btn">다음</button>
+			</div>
+		</div>
+		<div class="descWrap">
+			<div class="left">
+				<h4 class="tit">새하얀 왕벚꽃잎이 피어나듯<br> 맑고 화사하게</h4>
+				<p>이니스프리 제주 왕벚꽃 라인은 수분을<br class="mBr"> 가득 머금은 벚꽃잎이<br class="pcBr"> 맑고 화사하게<br class="mBr"> 피어나듯 촉촉한 생기가 도는<br class="pcBr"> 건강한 피부로<br class="mBr"> 가꿔주는 스킨케어 라인입니다.</p>
+			</div>
+			<div class="right">
+				<h4 class="tit">브라이트닝 케어와 수분 케어를 함께</h4>
+				<p>3주간 숙성하여 완성한 제주 왕벚나무<br class="mBr"> 잎 추출물의<br class="pcBr"> 브라이트닝 효과가<br class="mBr"> 푸석한 피부에 맑고 화사한 생기를 주고,<br> Sugar beet(사탕무)에서 추출한 내추럴 베타인이<br class="mBr"> 피부 위<br class="pcBr"> 수분이 날아가지 않도록 보습막을<br class="mBr"> 만들어 건조함 없이<br class="pcBr"> 촉촉한 피부로 케어해줍니다.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="prdType videoType">
+		<video controls playsinline webkit-playsinline poster="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/commonVod.jpg">
+			<source type="video/mp4" src="https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/skinCare/cherry_blossom/commonVod.mp4">
+			지원 불가능한 브라우저입니다.
+		</video>
+	</div>
+
+	<script type="text/javascript">
+		setTimeout(function(){
+			$('.pdtViewMobile .sly').slick({
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				autoplay: false,
+				autoplaySpeed: 3000,
+				arrows: false,
+				dots: true
+			});				
+		},1000);
+
+		// var vid = document.getElementById("myVideo");
+		// vid.autoplay = false;
+		// vid.load();
+
+		var eSlideObj = {}
+		function pdtD_Slide(obj) {
+			var pdtD_SlideBtn = $('.'+obj).find('.swiper-btn');
+			
+			pdtD_SlideBtn.on('click', function(){
+				var $this = $(this);
+				if($this.hasClass('stop')) {
+					$this.removeClass('stop');
+					pdtD_ObjSlide.autoplay.start();
+				} else {
+					$this.addClass('stop');
+					pdtD_ObjSlide.autoplay.stop();
+				}
+			});
+			var pdtD_ObjSlide = new Swiper('.' + obj, {
+				loop: true,
+				speed: 800,
+				spaceBetween: 5,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.' + obj + ' .slidePage',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.next-btn',
+					prevEl: '.prev-btn',
+				},
+			});
+			eSlideObj[obj] = pdtD_ObjSlide;
+		}
+		// pdtD_Slide('pdtSlide1');
+		// pdtD_Slide('pdtSlide2');
+		pdtD_Slide('cbSlide');
+	</script>
+</div>
+<!-- content E -->

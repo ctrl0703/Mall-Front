@@ -33,7 +33,7 @@ public class FrontController {
 			lineCategory.setProducts(productClient.getCategoryProductList(lineCategory.getId()));
 		}
 		model.addAttribute("lineCategories", lineCategories);
-		return "/index";
+		return "index";
 	}
 
 	@RequestMapping("/shop/{categoryId}")
@@ -42,7 +42,7 @@ public class FrontController {
 		model.addAttribute("allCategories", allCategories);
 		model.addAttribute("category", productClient.getCategory(categoryId));
 		model.addAttribute("productList", productClient.getCategoryProductList(categoryId));
-		return "/shop";
+		return "shop";
 	}
 
 	@GetMapping("/product/{productId}")
@@ -52,13 +52,13 @@ public class FrontController {
 		
 		model.addAttribute("product", productClient.getProduct(productId));
 		model.addAttribute("sameLineProducts", productClient.getRelatedProductList(productId, "B"));
-		return "/product";
+		return "product";
 	}
 
 	@RequestMapping("/cart")
 	public String cart(Model model) {
 		List<Category> allCategories = productClient.getCategoryAllList();
 		model.addAttribute("allCategories", allCategories);
-		return "/cart";
+		return "cart";
 	}
 }

@@ -136,8 +136,8 @@
 										<div class="viewed_name"><a th:href="@{/product/{productId}(productId=${sameLineProduct.id})}" th:text="${sameLineProduct.name}"></a></div>
 									</div>
 									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">new</li>
+										<li class="item_mark item_discount" th:if="${sameLineProduct.isDiscount}">-25%</li>
+										<li class="item_mark item_new" th:if="${sameLineProduct.isNew}">new</li>
 									</ul>
 								</div>
 							</div>

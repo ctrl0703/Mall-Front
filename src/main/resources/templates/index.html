@@ -120,8 +120,8 @@
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
 											<ul class="product_marks">
-												<li class="product_mark product_discount">-25%</li>
-												<li class="product_mark product_new">new</li>
+												<li class="product_mark product_discount" th:if="${lineProduct.isDiscount}">-25%</li>
+												<li class="product_mark product_new" th:if="${lineProduct.isNew}">new</li>
 											</ul>
 										</div>
 									</div>
@@ -177,11 +177,9 @@
 											<div class="trends_price" th:text="${bestProduct.price + '원'}"></div>
 										</div>
 									</div>
-									<ul class="trends_marks">
-									<!-- 
+									<ul class="trends_marks"> 
 										<li class="trends_mark trends_discount">-25%</li>
-										<li class="trends_mark trends_new">new</li>
-									 -->
+										<li class="trends_mark trends_new" th:if="${bestProduct.isNew}">new</li>
 									</ul>
 									<div class="trends_fav"><i class="fas fa-heart"></i></div>
 								</div>
@@ -236,8 +234,8 @@
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
 												<ul class="product_marks">
-													<li class="product_mark product_discount">-25%</li>
-													<li class="product_mark product_new">new</li>
+													<li class="product_mark product_discount" th:if="${newProduct.isDiscount}">-25%</li>
+													<li class="product_mark product_new" th:if="${newProduct.isNew}">new</li>
 												</ul>
 											</div>
 										</div>

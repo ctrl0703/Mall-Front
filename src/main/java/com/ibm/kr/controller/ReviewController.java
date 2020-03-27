@@ -42,6 +42,7 @@ public class ReviewController {
 	@PostMapping("/allreview")
 	public String getReviewList(Model model, @ModelAttribute("reviewDTO") ReviewDTO reviewDTO) throws JsonProcessingException {
 
+/*				
 		// 검색조건이 있으면 상품정보 조회
 		String key = reviewDTO.getKey();
 
@@ -63,6 +64,7 @@ public class ReviewController {
 				reviewDTO.setPrdSeqList(_prdSeqList);
 			}
 		}
+*/
 
 		List<ReviewDTO> reviewList = reviewClient.getReviewList(reviewDTO);
 

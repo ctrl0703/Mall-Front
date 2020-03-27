@@ -1,10 +1,12 @@
 package com.ibm.kr.client;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ibm.kr.domain.Category;
 import com.ibm.kr.domain.Product;
@@ -28,4 +30,7 @@ public interface ProductClient {
 
 	@GetMapping("/category/{categoryCode}")
 	public Category getCategory(@PathVariable String categoryCode);
+	
+	@GetMapping("/product")
+	public List<Product> searchProduct(@RequestParam Map<String, Object> reqParam);
 }

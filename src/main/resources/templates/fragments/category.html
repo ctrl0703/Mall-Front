@@ -3,7 +3,7 @@
 	<ul class="cat_menu" th:fragment="category">
 		<li th:each="category : ${categories}" th:classappend="${#lists.size(category.subCategories) > 0 ? 'hassubs' : ''}">
 			<a href="#" th:text=${category.name}><i class="fas fa-chevron-right"></i></a>
-			<ul th:replace="/fragments/category :: category" th:with="categories=${category.subCategories}">
+			<ul th:replace="fragments/category :: category" th:with="categories=${category.subCategories}">
 			</ul>
 		</li>
 	</ul>

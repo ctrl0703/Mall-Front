@@ -374,7 +374,12 @@
 }
 .product_price dt
 {
-	margin-right:10px;
+	margin-right: 10px;
+}
+#product_option_list
+{
+	margin-top: 20px;
+	padding: 30px 15px;
 }
 .button_container
 {
@@ -642,9 +647,21 @@
 {
 	flex: 1;
 	text-align: center;
-	/*background-color: #104138;
     border-color: #104138;
-    color: #FFFFFF;*/
+    color: #000000;
+	border-radius: 0;
+}
+
+.detail .nav-link.active
+{
+    background-color: #104138;
+    border-color: #104138;
+	color: #ffffff;
+}
+
+.detail .nav-link:hover
+{
+    border-color: #104138;
 }
 
 .detail .tab-content

@@ -26,7 +26,13 @@ public class FrontController {
 		//베스트
 		model.addAttribute("bestProducts", productClient.getCategoryProductList("E"));
 		//라인별
-		model.addAttribute("lineCategories", productClient.getCategoryList("B"));
+		List<Category> lineCategories = productClient.getCategoryList("B");
+		for(Category lineCategory : lineCategories) {
+			if(lineCategories.indexOf(lineCategory) > 5) break;
+			
+			lineCategory.setProducts(productClient.getCategoryProductList(lineCategory.getId()));
+		}
+		model.addAttribute("lineCategories", lineCategories);
 		return "index";
 	}
 

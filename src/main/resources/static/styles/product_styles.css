@@ -647,21 +647,21 @@
 {
 	flex: 1;
 	text-align: center;
-    border-color: #104138;
+    border-color: #0e8ce4;
     color: #000000;
 	border-radius: 0;
 }
 
 .detail .nav-link.active
 {
-    background-color: #104138;
-    border-color: #104138;
+    background-color: #0e8ce4;
+    border-color: #0e8ce4;
 	color: #ffffff;
 }
 
 .detail .nav-link:hover
 {
-    border-color: #104138;
+    border-color: #0e8ce4;
 }
 
 .detail .tab-content

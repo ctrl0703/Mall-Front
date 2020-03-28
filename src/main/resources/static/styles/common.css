@@ -511,7 +511,7 @@ section
 {
 	font-size: 36px;
 	font-weight: 500;
-	color: #104138;
+	color: #0e8ce4;
 }
 .header_search
 {
@@ -718,7 +718,7 @@ select option
 	right: 0;
 	width: 50px;
 	height: 100%;
-	background: #104138;
+	background: #0e8ce4;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -846,7 +846,7 @@ select option
 {
 	width: 293px;
 	height: 100%;
-	background: #104138;
+	background: #0e8ce4;
 	padding-left: 35px;
 	cursor: pointer;
 	z-index: 1;
@@ -1212,7 +1212,7 @@ select option
 {
 	font-size: 18px;
 	font-weight: 500;
-	color: #104138;
+	color: #0e8ce4;
 	margin-top: 13px;
 }
 .footer_contact_text

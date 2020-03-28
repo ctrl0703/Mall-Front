@@ -261,7 +261,7 @@
 	left: 0;
 	height: 100%;
 	border-radius: 5px;
-	background: #104138;
+	background: #0e8ce4;
 }
 .deals_timer
 {
@@ -441,7 +441,7 @@
 	left: 0;
 	width: 80px;
 	height: 2px;
-	background: #104138;
+	background: #0e8ce4;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -556,7 +556,7 @@
 }
 .product_name div a:hover
 {
-	color: #104138;
+	color: #0e8ce4;
 }
 .product_color
 {
@@ -688,11 +688,11 @@
 }
 .featured_slider .slick-dots li:hover
 {
-	background: #104138;
+	background: #0e8ce4;
 }
 .featured_slider .slick-dots li.slick-active
 {
-	background: #104138;
+	background: #0e8ce4;
 }
 .featured_slider .slick-dots li:last-child
 {
@@ -886,7 +886,7 @@
 	font-size: 10px;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	color: #104138;
+	color: #0e8ce4;
 }
 .popular_category
 {
@@ -1036,7 +1036,7 @@
 }
 .banner_2_dots .owl-dot.active
 {
-	background: #104138;
+	background: #0e8ce4;
 	box-shadow: none;
 }
 
@@ -1135,11 +1135,11 @@
 }
 .arrivals_slider .slick-dots li:hover
 {
-	background: #104138;
+	background: #0e8ce4;
 }
 .arrivals_slider .slick-dots li.slick-active
 {
-	background: #104138;
+	background: #0e8ce4;
 }
 .arrivals_slider .slick-dots li:last-child
 {
@@ -1228,7 +1228,7 @@
 }
 .arrivals_single_category a:hover
 {
-	color: #104138;
+	color: #0e8ce4;
 }
 .arrivals_single_name_container
 {
@@ -1251,7 +1251,7 @@
 }
 .arrivals_single_name a:hover
 {
-	color: #104138;
+	color: #0e8ce4;
 }
 .arrivals_single_price
 {
@@ -1419,7 +1419,7 @@
 }
 .bestsellers_category a:hover
 {
-	color: #104138;
+	color: #0e8ce4;
 }
 .bestsellers_name
 {
@@ -1438,7 +1438,7 @@
 }
 .bestsellers_name a:hover
 {
-	color: #104138;
+	color: #0e8ce4;
 }
 .bestsellers_rating
 {
@@ -1524,7 +1524,7 @@
 }
 .bestsellers_new
 {
-	background: #104138;
+	background: #0e8ce4;
 }
 .bestsellers_slider .slick-dots
 {
@@ -1559,11 +1559,11 @@
 }
 .bestsellers_slider .slick-dots li:hover
 {
-	background: #104138;
+	background: #0e8ce4;
 }
 .bestsellers_slider .slick-dots li.slick-active
 {
-	background: #104138;
+	background: #0e8ce4;
 }
 .bestsellers_slider .slick-dots li:last-child
 {
@@ -1609,13 +1609,13 @@
 }
 .advert_title a:hover
 {
-	color: #104138;
+	color: #0e8ce4;
 }
 .advert_title_2 a
 {
 	font-size: 18px;
 	font-weight: 500;
-	color: #104138;
+	color: #0e8ce4;
 }
 .advert_title_2 a:hover
 {
@@ -1745,7 +1745,7 @@
 }
 .trends_category a:hover
 {
-	color: #104138;
+	color: #0e8ce4;
 }
 .trends_content
 {
@@ -1762,7 +1762,7 @@
 }
 .trends_name a:hover
 {
-	color: #104138;
+	color: #0e8ce4;
 }
 .trends_price
 {
@@ -1892,7 +1892,7 @@
 .reviews_all a
 {
 	font-size: 10px;
-	color: #104138;
+	color: #0e8ce4;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
@@ -1984,7 +1984,7 @@
 }
 .reviews_dots .owl-dot.active
 {
-	background: #104138;
+	background: #0e8ce4;
 	box-shadow: none;
 }
 
@@ -2110,7 +2110,7 @@
 }
 .viewed_name a:hover
 {
-	color: #104138;
+	color: #0e8ce4;
 }
 .item_marks
 {

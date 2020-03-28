@@ -1,8 +1,6 @@
 package com.ibm.kr.controller;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +19,7 @@ import com.ibm.kr.client.ProductClient;
 import com.ibm.kr.client.ReviewClient;
 import com.ibm.kr.domain.Product;
 import com.ibm.kr.domain.ReviewDTO;
+import com.ibm.kr.domain.ReviewInfoDTO;
 import com.ibm.kr.domain.ReviewerDTO;
 import com.ibm.kr.util.CommonUtils;
 
@@ -71,10 +70,8 @@ public class ReviewController {
 		String reviewTotCnt = "0";
 		int pageno = reviewDTO.getPageNo();
 		if (reviewList != null && reviewList.size() > 0 && pageno == 1) {
-			Map<String, String> map = reviewClient.getReviewListInfo(reviewDTO);
-
-			if (map != null && map.get("TotCnt") != null)
-				reviewTotCnt = map.get("TotCnt"); 
+			ReviewInfoDTO reviewInfoDTO = reviewClient.getReviewListInfo(reviewDTO);
+			reviewTotCnt = reviewInfoDTO.getTotCnt();
 		}
 		model.addAttribute("reviewTotCnt", reviewTotCnt);
 

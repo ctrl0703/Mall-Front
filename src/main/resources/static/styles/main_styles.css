@@ -2147,3 +2147,10 @@
 {
 	display: inline-block;
 }
+
+.link-item { cursor: pointer; }
+#evalScore
+{
+	width: 20px;
+	display: inline;
+}

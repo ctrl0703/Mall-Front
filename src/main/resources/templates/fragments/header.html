@@ -48,20 +48,8 @@
 												<span class="custom_dropdown_placeholder clc">전체</span>
 												<i class="fas fa-chevron-down"></i>
 												<ul class="custom_list clc">
-													<li><a class="clc" href="#">전체</a></li>
-													<li><a class="clc" href="#">팩/마스크</a></li>
-													<li><a class="clc" href="#">페이스메이크업</a></li>
-													<li><a class="clc" href="#">컬러메이크업</a></li>
-													<li><a class="clc" href="#">클렌징</a></li>
-													<li><a class="clc" href="#">바디</a></li>
-													<li><a class="clc" href="#">네일</a></li>
-													<li><a class="clc" href="#">헤어</a></li>
-													<li><a class="clc" href="#">방향</a></li>
-													<li><a class="clc" href="#">기획 세트</a></li>
-													<li><a class="clc" href="#">미용소품</a></li>
-													<li><a class="clc" href="#">남성</a></li>
-													<li><a class="clc" href="#">라이프 스타일</a></li>
-													<li><a class="clc" href="#">반려동물 케어</a></li>
+													<li><a class="clc" href="/shop/A">전체</a></li>
+													<li th:each="typeCategories : ${allCategories}"><a class="clc" th:href="@{/shop/{categoryId}(categoryId=${typeCategories.id})}" th:text="${typeCategories.name}"></a></li>
 												</ul>
 											</div>
 										</div>
@@ -140,7 +128,7 @@
 
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="event.html">이벤트<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="/review/">리뷰<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="contact.html">ABOUT US<i class="fas fa-chevron-down"></i></a></li>
@@ -180,10 +168,10 @@
 							</div>
 							<ul class="page_menu_nav">
 								<li class="page_menu_item">
-									<a href="#">Home<i class="fa fa-angle-down"></i></a>
+									<a href="/">Home<i class="fa fa-angle-down"></i></a>
 								</li>
 								<li class="page_menu_item"><a href="event.html">이벤트<i class="fa fa-angle-down"></i></a></li>
-								<li class="page_menu_item"><a href="review.html">리뷰<i class="fa fa-angle-down"></i></a></li>
+								<li class="page_menu_item"><a href="/review/">리뷰<i class="fa fa-angle-down"></i></a></li>
 							</ul>
 						</div>
 					</div>

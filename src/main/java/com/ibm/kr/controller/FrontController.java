@@ -10,17 +10,24 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ibm.kr.client.ProductClient;
+import com.ibm.kr.client.ReviewClient;
 import com.ibm.kr.domain.Category;
+import com.ibm.kr.domain.ReviewDTO;
 
 @Controller
 public class FrontController {
 	@Autowired
 	private ProductClient productClient;
+	@Autowired
+	private ReviewClient reviewClient;
 
 	@RequestMapping("/")
 	public String index(Model model) {
+		
+		// 카테고리 메뉴
 		List<Category> allCategories = productClient.getCategoryAllList();
 		model.addAttribute("allCategories", allCategories);
+		
 		//신제품
 		model.addAttribute("newProducts", productClient.getCategoryProductList("D"));
 		//베스트
@@ -33,6 +40,13 @@ public class FrontController {
 			lineCategory.setProducts(productClient.getCategoryProductList(lineCategory.getId()));
 		}
 		model.addAttribute("lineCategories", lineCategories);
+		//최신리뷰
+		ReviewDTO reviewdto = new ReviewDTO();
+		reviewdto.setPageNo(1);
+		reviewdto.setReviewCl("A");
+		reviewdto.setSort(1);
+		model.addAttribute("reviews", reviewClient.getReviewList(reviewdto));
+		
 		return "index";
 	}
 
@@ -52,6 +66,11 @@ public class FrontController {
 		
 		model.addAttribute("product", productClient.getProduct(productId));
 		model.addAttribute("sameLineProducts", productClient.getRelatedProductList(productId, "B"));
+		ReviewDTO reviewdto = new ReviewDTO();
+		reviewdto.setPageNo(1);
+		reviewdto.setReviewCl("A");
+		reviewdto.setPrdSeq(productId);
+		model.addAttribute("reviewInfo", reviewClient.getReviewListInfo(reviewdto));
 		return "product";
 	}
 

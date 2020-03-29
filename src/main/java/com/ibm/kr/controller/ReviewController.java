@@ -150,7 +150,7 @@ public class ReviewController {
 		// 댓글 페이징 버튼 컨트롤 
 		model.addAttribute("Count", reviewClient.getCommentsTotalCount(_id));
 
-		return "detailTest";
+		return "reviewDetail";
 	}
 
 	// 댓글 페이징 

@@ -1030,3 +1030,14 @@ $(document).ready(function()
     	}	
     }
 });
+
+function openWin(url) {
+	ReviewDetailView = window
+			.open(
+					"about:blank",
+					"ReviewDetail",
+					"width=550,height=600,left=400,top=50,dependent=yes,menubar=no,status=no,resizable=yes,toolbar=no,scrollbars=yes");
+	ReviewDetailView.location.href = url;
+	ReviewDetailView.focus();
+	return false;
+}

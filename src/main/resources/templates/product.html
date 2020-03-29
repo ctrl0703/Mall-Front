@@ -22,7 +22,7 @@
 				<div class="col-lg-6 order-lg-2 order-1">
 					<div class="image_selected"><img th:src="${product.imageUrl}" alt=""></div>
 					<div class="review mx-auto">
-						<span class="reviewPointM"><span style="width: calc(100% / 5 * 4.6);"></span></span>
+						<span class="reviewPointM"><span th:style="'width: ' + ${reviewInfo.avgScorePercent}"></span></span>
 						<span class="reviewNum h3" th:text="${reviewInfo.avgScore}"></span>
 						<span class="reviewLength">(<span class="num" th:text="${reviewInfo.totCnt}"></span>건)</span>
 					</div>

@@ -287,7 +287,82 @@
 							통신판매신고번호 2013-서울중구-0025
 						</div>
 					  </div>
-					  <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+					  <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-contact-tab">
+					  	<div class="tab-content-paragraph">
+						  	<div class="card link-item" th:each="review : ${reviews}" th:data-url="@{'/review/reviewDetail/'+${review._id}}" onclick="openWin(this.getAttribute('data-url'));">
+    							<div class="card-body">
+    								<div class="row">
+    									<div class="col-md-3">
+    										<img th:src="${review.tplList[0]}" alt="" style="width:100%;">
+    									</div>
+    									<div class="col-md-9">
+							  				<p class="card-text">
+							  					<th:block th:each="num:${#numbers.sequence(1,review.evalScore)}">
+													<img id="evalScore" src="/img/star.png"/>
+												</th:block>
+												<span th:text="${review.evalScore}"></span>
+							  				</p>
+							  				
+									        <p class="card-text font-weight-bold" th:text="${product.name}"></p>
+									        <p class="card-text" th:text="${review.goodCnts}"></p>
+							  			</div>
+    								</div>
+    								<div class="row">
+    									<div class="col-md-12">
+	    									<p class="card-text">
+												<img th:src="${review.reviewer[0].profileImg}" style="width:35px" alt="Img">
+												
+												<span class="badge badge-success reviewerLevel" th:text="'lv.' + ${review.reviewer[0].lvl}"></span>
+												<span class="reviewerNickname font-weight-bold" th:text="${review.reviewer[0].nickNm}"></span>
+												
+												<span>  |  </span>
+												
+												<span th:text="${review.reviewer[0].sex.equals('F')} ? '#여자' : '#남자'"></span> <!-- 성별 -->
+												<span th:text="'#'+${review.reviewer[0].age}+'대'"></span> <!-- 연령대 -->
+												<th:block th:switch="${review.reviewer[0].skinToneCd}" class="skinToneCd"> <!-- 피부톤코드 -->
+													<span th:case="'SX01'">#노랑</span>
+													<span th:case="'SX02'">#보통</span>
+													<span th:case="'SX03'">#붉은</span>
+												</th:block>
+												<th:block th:switch="${review.reviewer[0].skinEtcInfo}" class="skinEtcInfo"> <!-- 피부기타정보 -->
+													<span th:case="'SY13'">#13호</span>
+													<span th:case="'SY21'">#21호</span>
+													<span th:case="'SY23'">#23호</span>
+												</th:block>
+												<th:block th:switch="${review.reviewer[0].skinTypeCd}" class="skinTypeCd"> <!-- 피부타입 -->
+													<span th:case="'SZ01'">#건성</span>
+													<span th:case="'SZ02'">#중성</span>
+													<span th:case="'SZ03'">#지성</span>
+													<span th:case="'SZ04'">#민감성</span>
+													<span th:case="'SZ05'">#복합성</span>
+													<span th:case="'SZ06'">#약건성</span>
+													<span th:case="'SZ07'">#트러블성</span>
+												</th:block>			
+												<th:block th:each="skinTrublData : ${review.reviewer[0].skinTrublList}">	<!-- 피부고민 -->
+													<th:block th:switch="${skinTrublData}" class="skinTrublList">
+														<span th:case="'SW01'">#모공</span>
+														<span th:case="'SW02'">#주름</span>
+														<span th:case="'SW03'">#탄력</span>
+														<span th:case="'SW04'">#블랙헤드</span>
+														<span th:case="'SW05'">#트러블</span>
+														<span th:case="'SW06'">#각질</span>
+														<span th:case="'SW07'">#잡티</span>
+														<span th:case="'SW08'">#피지과다</span>
+														<span th:case="'SW09'">#건조함</span>
+														<span th:case="'SW10'">#민감성</span>
+														<span th:case="'SW11'">#색소침착</span>
+														<span th:case="'SW12'">#피부톤</span>
+													</th:block>
+												</th:block>
+											
+									        	<small class="text-muted float-right" th:text="${#dates.format(review.regDate, 'yyyy.MM.dd')}"></small>
+								        	</p>
+							        	</div>
+    								</div>
+							  	</div>
+							</div>
+					  	</div>
+					  </div>
 					  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 					  	<div class="tab-content-paragraph">
 					  		※ 배송, 주문(취소/교환/환불)관련 문의는 고객센터 1:1 고객상담에 남겨주세요. <a>1:1 고객상담</a>

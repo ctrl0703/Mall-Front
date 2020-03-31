@@ -71,6 +71,12 @@ public class FrontController {
 		reviewdto.setReviewCl("A");
 		reviewdto.setPrdSeq(productId);
 		model.addAttribute("reviewInfo", reviewClient.getReviewListInfo(reviewdto));
+
+		reviewdto.setPageNo(1);
+		reviewdto.setReviewCl("A");
+		reviewdto.setPrdSeq(productId);
+		reviewdto.setSort(2);
+		model.addAttribute("reviews", reviewClient.getReviewList(reviewdto));
 		return "product";
 	}
 

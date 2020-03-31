@@ -978,7 +978,7 @@
 													<img id="evalScore" src="/img/star.png"/>
 												</th:block>
 											</div>
-											<div class="review_time" th:text="${#dates.format(review.regDate, 'yyyy-MM-dd')}"></div>
+											<div class="review_time float-right" th:text="${#dates.format(review.regDate, 'yyyy-MM-dd')}"></div>
 										</div>
 										<div class="review_text"><p th:text="${#strings.substring(review.goodCnts, 0, 30)}"></p></div>
 									</div>

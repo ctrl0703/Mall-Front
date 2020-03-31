@@ -1322,3 +1322,11 @@ select option
 {
 	margin-right: 0px;
 }
+
+.link-item { cursor: pointer; }
+
+#evalScore
+{
+	width: 20px;
+	display: inline;
+}

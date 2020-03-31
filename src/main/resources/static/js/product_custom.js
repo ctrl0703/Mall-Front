@@ -337,6 +337,7 @@ $(document).ready(function()
 				originalVal = input.val();
 				endVal = parseFloat(originalVal) + 1;
 				input.val(endVal);
+				calculate_price();
 			});
 
 			decButton.on('click', function()
@@ -346,6 +347,7 @@ $(document).ready(function()
 				{
 					endVal = parseFloat(originalVal) - 1;
 					input.val(endVal);
+					calculate_price();
 				}
 			});
 		}
@@ -416,5 +418,14 @@ $(document).ready(function()
 	function initHtml()
 	{
 		$('#nav-detail').load($('#nav-detail').attr("value"));
+	}
+	
+	$('#quantity_input').change(function() {
+		calculate_price();
+	})
+	;
+	
+	function calculate_price() {
+		$('#result_price').text($('#quantity_input').val() * stringNumberToInt($('#price').text()));
 	}
 });

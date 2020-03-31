@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<div class="popArea">
+        <div class="popAreaBox">
+			<div class="popWrap kitStorePop" id="kitStoreChkPop" style="width: 550px;">
+				<div class="popPadding">
+					<h2>샘플링 신청
+	                    <a href="javascript:void(0);" class="btnCloseLayer" onclick="javascript:layerPopClose(this);">
+	                    	<img src="https://images.innisfree.co.kr/resources/web/images/common/btnPopClose.gif" align="right" alt="">
+	                    </a>
+	                </h2>
+					<div class="popCon">
+						<p class="txt">
+							<span class="tt">프바써바 사전 샘플링 EVENT</span> <br/>
+							<span>수령기간 : 2020년 2월 01일(토) ~ 2020년 2월 29일(토))</span>
+						</p>
+						<div class="userData">
+							<dl>
+								<dt>고객명
+								<input type="text" class="input1 nameText" maxlength="10" id="nameText" name="nameText" style="width:122px;" value=""></dt> 
+								<dt>휴대폰
+								<input type="text" class="input1 phoneText"
+									   maxlength="3" id="mobileNo1" name="mobileNo1" value="" style="width:50px;" onkeyup="fnCheckNum(this);"> 
+								<span class="hyphen_line">-</span> 
+								<input type="text" class="input1 phoneText" 
+									   maxlength="4" id="mobileNo2" name="mobileNo2" value="" style="width:50px;" onkeyup="fnCheckNum(this);"> 
+								<span class="hyphen_line">-</span>
+								<input type="text" class="input1 phoneText" 
+									   maxlength="4" id="mobileNo3" name="mobileNo3" value="" style="width:50px;" onkeyup="fnCheckNum(this);">
+								</dt>
+								<br/>
+								<dt>증정샘플 : NEW 그린티 프로바이오틱스 크림 샘플(10ml)</dt>
+							</dl>
+						</div>
+						<div class="cautionArea">
+							<ul>
+								<li>위 기재된 휴대폰 번호로 알림톡 메시지가 발송됩니다.
+	                            </li>
+	                            <li>수령 기간 외 방문 시, 샘플 수령이 불가합니다.</li>
+							</ul>
+						</div>
+						<p class="agreeChk noAgree">
+	                        <input type="checkbox" id="agreeChk" name="agreeChk" />
+	                        <label for="agreeChk">&lt;프바써바 사전 샘플링&gt; 이벤트 관련 알림톡 메시지 수신에 동의합니다.</label>
+	                    </p>
+					</div>
+					<div class="popBtn" align="center">
+						<span class="btn btn-primary">
+                            <a href="javascript:void(0);" onclick="alert('신청기간이 아닙니다.');">신청하기</a>
+                        </span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script th:inline="javascript">
+	/**숫자만 입력*/
+	function fnCheckNum(objInput) { 
+		
+		var szBuff = "";
+		var chBuff = '';
+		var szTemp = "";
+		var i = 0;
+
+		szBuff = objInput.value;
+		for(i=0; i<szBuff.length; i++) {
+			chBuff = szBuff.charAt(i);
+			if( (chBuff < '0' || chBuff > '9')) {
+				for(var j=0; j<szBuff.length; j++) {
+					chBuff = szBuff.charAt(j);
+					if( (chBuff < '0' || chBuff > '9')) {
+						continue;
+					} else {
+						szTemp = szTemp + chBuff;
+					}
+				}
+				objInput.value = szTemp;
+
+				return;
+			}
+		}
+	}
+	
+	function applySample(){
+
+		if (!$("#agreeChk").prop("checked") || !$(".phoneText").prop("checked")) {
+			alert("입력되지 않은 정보가 있습니다.\n다시 확인해주세요 : )");
+			return;
+		}
+	}
+	
+	function layerPopClose(){
+		parent.close();
+		window.close();
+		self.close();
+	}
+	</script>
+</html>
+

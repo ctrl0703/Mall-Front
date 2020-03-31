@@ -1041,3 +1041,7 @@ function openWin(url) {
 	ReviewDetailView.focus();
 	return false;
 }
+
+function stringNumberToInt(stringNumber){
+    return parseInt(stringNumber.replace(/,/g , ''));
+}

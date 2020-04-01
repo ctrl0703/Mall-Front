@@ -75,7 +75,7 @@
 		
 		<!-- 제품 정보 S -->
 		<div class="powerReviewOuter">
-			<div class="product">
+			<div class="product" style="cursor: pointer;" th:data-url="@{/product/{productId}(productId=${ReviewData.prdSeq})}" onclick="location.href=this.getAttribute('data-url');">
 				<img class="productImg"  th:src="${ReviewData.product.imageUrl}" alt="Img"/>
 				<div class="productDetail">
 					<span th:text="${ReviewData.product.name}"></span><br/>

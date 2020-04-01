@@ -426,6 +426,6 @@ $(document).ready(function()
 	;
 	
 	function calculate_price() {
-		$('#result_price').text($('#quantity_input').val() * stringNumberToInt($('#price').text()));
+		$('#result_price').text(numberWithCommas($('#quantity_input').val() * stringNumberToInt($('#price').text())));
 	}
 });

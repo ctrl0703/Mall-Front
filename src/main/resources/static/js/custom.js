@@ -1045,3 +1045,7 @@ function openWin(url) {
 function stringNumberToInt(stringNumber){
     return parseInt(stringNumber.replace(/,/g , ''));
 }
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

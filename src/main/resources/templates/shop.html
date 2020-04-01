@@ -46,7 +46,7 @@
 
 					<div class="shop_content">
 						<div class="shop_bar clearfix">
-							<div class="shop_product_count"><span th:text="${productList.size()}"></span> 개의 제품</div>
+							<div class="shop_product_count"><span th:text="${productList.totalCount}"></span> 개의 제품</div>
 							<div class="shop_sorting">
 								<span>Sort by:</span>
 								<ul>
@@ -66,7 +66,7 @@
 							<div class="product_grid_border"></div>
 
 							<!-- Product Item -->
-							<div class="product_item is_new" th:each="product : ${productList}">
+							<div class="product_item is_new" th:each="product : ${productList.content}">
 								<div class="product_border"></div>
 								<div class="product_image d-flex flex-column align-items-center justify-content-center"><a th:href="@{/product/{productId}(productId=${product.id})}"><img th:src="${product.imageUrl}" alt=""></a></div>
 								<div class="product_content">
@@ -86,11 +86,12 @@
 						<div class="shop_page_nav d-flex flex-row">
 							<div class="page_prev d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-left"></i></div>
 							<ul class="page_nav d-flex flex-row">
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">...</a></li>
-								<li><a href="#">21</a></li>
+								<!-- <li th:each="page : ${#numbers.sequence(1,productList.maxPage)}" th:text="${page}"></li> -->
+								<li><a th:text="${productList.page-2}" th:href="@{/shop/{categoryId}?page={page}(categoryId=${category.id}, page=${productList.page})}"></a></li>
+								<li><a th:text="${productList.page-1}" th:href="@{/shop/{categoryId}?page={page}(categoryId=${category.id}, page=${productList.page})}"></a></li>
+								<li><a th:text="${productList.page}" th:href="@{/shop/{categoryId}?page={page}(categoryId=${category.id}, page=${productList.page})}"></a></li>
+								<li><a th:text="${productList.page+1}" th:href="@{/shop/{categoryId}?page={page}(categoryId=${category.id}, page=${productList.page})}"></a></li>
+								<li><a th:text="${productList.page+2}" th:href="@{/shop/{categoryId}?page={page}(categoryId=${category.id}, page=${productList.page})}"></a></li>
 							</ul>
 							<div class="page_next d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-right"></i></div>
 						</div>

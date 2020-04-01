@@ -1,6 +1,7 @@
 package com.ibm.kr.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ibm.kr.client.ProductClient;
 import com.ibm.kr.client.ReviewClient;
@@ -51,11 +53,11 @@ public class FrontController {
 	}
 
 	@RequestMapping("/shop/{categoryId}")
-	public String shop(@PathVariable String categoryId, Model model) {
+	public String shop(@PathVariable String categoryId, @RequestParam Map<String, Object> reqParam , Model model) {
 		List<Category> allCategories = productClient.getCategoryAllList();
 		model.addAttribute("allCategories", allCategories);
 		model.addAttribute("category", productClient.getCategory(categoryId));
-		model.addAttribute("productList", productClient.getCategoryProductList(categoryId));
+		model.addAttribute("productList", productClient.getCategoryProductListByPage(categoryId, reqParam));
 		return "shop";
 	}
 

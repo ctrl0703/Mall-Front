@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ibm.kr.domain.Category;
+import com.ibm.kr.domain.Page;
 import com.ibm.kr.domain.Product;
 
 @FeignClient(name="product-service", url="${feign.client.url.ProductServiceUrl}")
@@ -33,4 +34,7 @@ public interface ProductClient {
 	
 	@GetMapping("/product")
 	public List<Product> searchProduct(@RequestParam Map<String, Object> reqParam);
+
+	@GetMapping("/category/{categoryCode}/pagingProduct")
+	public Page<Product> getCategoryProductListByPage(@PathVariable String categoryCode, @RequestParam Map<String, Object> reqParam);
 }

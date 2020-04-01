@@ -57,6 +57,7 @@ public class FrontController {
 		List<Category> allCategories = productClient.getCategoryAllList();
 		model.addAttribute("allCategories", allCategories);
 		model.addAttribute("category", productClient.getCategory(categoryId));
+		reqParam.put("page", reqParam.get("page") == null ? "1" : reqParam.get("page"));
 		model.addAttribute("productList", productClient.getCategoryProductListByPage(categoryId, reqParam));
 		return "shop";
 	}

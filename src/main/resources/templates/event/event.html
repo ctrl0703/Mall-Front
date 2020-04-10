@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="layouts/default">
+
+<!-- product.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+	<link rel="stylesheet" type="text/css" href="/styles/event_styles.css">
+</th:block>
+
+<div layout:fragment="contents">
+
+	<!-- Trends -->
+
+	<div class="events">
+		<div class="container">
+			<div class="row">
+				<div class="card border-light col-lg-4 mb-3" th:each="event : ${eventList}">
+					<img th:src="${event.imageUrl}" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title" th:text="${event.eventNm}"></h5>
+						<p class="card-text" th:text="${event.startDate} + '~' + ${event.endDate}"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- product.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+	<script src="/js/event_custom.js"></script>
+</th:block>
+
+</html>

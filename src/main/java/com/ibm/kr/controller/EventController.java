@@ -18,7 +18,7 @@ public class EventController {
 		
 	    model.addAttribute("eventList", eventClient.getEventList());
 	    
-		return "event/eventPage";
+		return "event/event";
 	}
 	
 	@GetMapping("/eventPopup") 

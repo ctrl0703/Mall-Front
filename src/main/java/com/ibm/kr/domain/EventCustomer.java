@@ -9,11 +9,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Event {
+public class EventCustomer {
 	String eventId;
-	String eventNm;
-	Date startDate;
-	Date endDate;
-	String imageUrl;
-	Date insertDate;
+	String name;
+	String mobileNumber;
+	Date applyDate;
 }

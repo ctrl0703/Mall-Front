@@ -428,4 +428,10 @@ $(document).ready(function()
 	function calculate_price() {
 		$('#result_price').text(numberWithCommas($('#quantity_input').val() * stringNumberToInt($('#price').text())));
 	}
+	
+	$('.product_color_list').click(function() {
+		console.log('click');
+		$('#product_option_list').append('<div class="product_option_select"><div class="product_option_label">당근</div><!-- Product Quantity --><div class="product_quantity clearfix">	<span>수량: </span><input id="quantity_input" type="text" pattern="[0-9]*" value="1">	<div class="quantity_buttons"><div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div><div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div></div></div></div>');
+		$('.product_color_list').css('display','none');
+	});
 });

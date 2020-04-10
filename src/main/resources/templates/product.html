@@ -66,7 +66,7 @@
 											<div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>
 
 											<ul class="color_list">
-												<li th:each="option : ${product.options}"><div th:text=${option.name}></div></li>
+												<li class="product_color_list" th:each="option : ${product.options}"><div th:text=${option.name}></div></li>
 											</ul>
 										</li>
 									</ul>
@@ -84,7 +84,18 @@
 								</div>
 								
 								<div id="product_option_list" class="bg-light" th:if="${#lists.size(product.options) > 1}">
-								옵션1
+									<div class="product_option_select">
+										<div class="product_option_label">당근</div>
+										<!-- Product Quantity -->
+										<div class="product_quantity clearfix">
+											<span>수량: </span>
+											<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+											<div class="quantity_buttons">
+												<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+												<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+											</div>
+										</div>
+									</div>
 								</div>
 
 								<div class="product_price">
